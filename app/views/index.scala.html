@@ -1,7 +1,29 @@
 @(message: String)
 
-@main("Welcome to Play") {
+@main("Home") {
 
-    @play20.welcome(message, style = "Java")
+	<div class="row">
+    	
+    		<div class="col l6 m12 s12  ">
+	    		
+	    		<div class="col s12">
+	    			<h2>Misuration</h2>
+	    			<div style="border:1px solid black; min-height:200px;">
+	    				@loader()
+	    			</div>
+	    		</div>
+	    		<div class="col s12">
+	    			<h2>Failure</h2>
+	    			<div style="border:1px solid black; min-height:200px;">
+	    				@loader()
+	    			</div>
+	    		</div>
+    		
+    		</div>
+    		<div class="col l6 m12 s12">
+    			<input type="date" class="datepicker">
+    		</div>	
+         
+    </div>   
 
 }
