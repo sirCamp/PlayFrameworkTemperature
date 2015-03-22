@@ -3554,19 +3554,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                                 val( thingItem == 'clear' ? '' : P.get( thingItem, SETTINGS.format ) ).
                                 trigger( 'change' )
                                 
-                                $(".fa-spin").show();
-                                console.log('creao oggetto e stampo');
-
-                                $.get( "/temperature/show/"+thingValue)
-                                  .done(function(data) {
-                                    console.log( "second success" );
-                                  })
-                                  .fail(function(data) {
-                                    console.log( "error" );
-                                  })
-                                  .always(function(data) {
-                                    $(".fa-spin").hide();
-                                  });
+                               
                         }
                     }
 
