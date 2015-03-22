@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/stefano/Repository/PlayFrameworkTemperature/app/assets/javascripts/main.coffee:2: regular expressions cannot begin with `*`[0m
+[0m[[31merror[0m] [0m	/*MOBILE SIDE-BAR*/[0m
+[0m[[31merror[0m] [0m	^[0m
+[0m[[31merror[0m] [0mone error found[0m

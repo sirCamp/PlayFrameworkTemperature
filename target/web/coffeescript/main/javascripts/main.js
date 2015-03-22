@@ -1,9 +1,13 @@
 (function() {
   $(document).ready(function() {
+    var $input, picker;
     $(".button-collapse").sideNav();
-    $('.datepicker').pickadate({
-      selectMonths: true,
-      selectYears: 15
+    $input = $('.datepicker').pickadate();
+    $('.datepicker').hide();
+    picker = $input.pickadate('picker');
+    picker.open();
+    picker.on('set', function(data) {
+      console.log(data);
     });
   });
 
