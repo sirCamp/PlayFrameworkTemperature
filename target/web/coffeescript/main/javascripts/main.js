@@ -6,17 +6,27 @@
     $('.datepicker').hide();
     picker = $input.pickadate('picker');
     picker.open();
-    picker.on('set', function(data) {
-      $.get('/temperature/show/' + thingValue).done(function(data) {
-        console.log('second success');
-      }).fail(function(data) {
-        console.log('error');
-      }).always(function(data) {
-        $('.fa-spin').hide();
-      });
+    return picker.on('set', function(data) {
+      if (data.select !== void 0) {
+        $.get('/temperature/show/' + data.select).done(function(data) {
+          console.log('second success');
+        }).fail(function(data) {
+          console.log('error');
+        }).always(function(data) {
+          $('.fa-spin').hide();
+        });
+        $.get('/failure/show/' + data.select).done(function(data) {
+          console.log('second success');
+        }).fail(function(data) {
+          console.log('error');
+        }).always(function(data) {
+          $('.fa-spin').hide();
+        });
+        return;
+      }
+      $(".fa-spin").show();
+      return console.log('creao oggetto e stampo');
     });
-    $(".fa-spin").show();
-    return console.log('creao oggetto e stampo');
   });
 
   return;

@@ -35,16 +35,25 @@ Seq[Any](format.raw/*1.19*/("""
     		<div class="col l6 m12 s12  ">
 	    		
 	    		<div class="col s12">
-	    			<h2>Misuration</h2>
+	    			<h3><span class="fa fa-file"></span>Misuration</h3>
 	    			<div style="border:1px solid black; min-height:200px;">
-	    				"""),_display_(/*12.11*/loader()),format.raw/*12.19*/("""
-	    			"""),format.raw/*13.9*/("""</div>
+	    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div></div>
+	    			</div>
 	    		</div>
 	    		<div class="col s12">
-	    			<h2>Failure</h2>
+	    			<h3><span class="fa fa-warning"></span>Failure</h3>
 	    			<div style="border:1px solid black; min-height:200px;">
-	    				"""),_display_(/*18.11*/loader()),format.raw/*18.19*/("""
-	    			"""),format.raw/*19.9*/("""</div>
+	    				"""),_display_(/*27.11*/loader()),format.raw/*27.19*/("""
+	    			"""),format.raw/*28.9*/("""</div>
 	    		</div>
     		
     		</div>
@@ -54,7 +63,7 @@ Seq[Any](format.raw/*1.19*/("""
          
     </div>   
 
-""")))}),format.raw/*29.2*/("""
+""")))}),format.raw/*38.2*/("""
 """))}
   }
 
@@ -67,11 +76,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sat Mar 21 16:54:04 CET 2015
+                  DATE: Sun Mar 22 17:48:12 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/index.scala.html
-                  HASH: a86a690883cea4b4127d5b6ee97353730136f47c
-                  MATRIX: 723->1|828->18|856->21|876->33|915->35|944->38|1171->238|1200->246|1236->255|1412->404|1441->412|1477->421|1669->583
-                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|40->12|40->12|41->13|46->18|46->18|47->19|57->29
+                  HASH: 9272293c98639cb4f2da6e3888634e122a4a3f77
+                  MATRIX: 723->1|828->18|856->21|876->33|915->35|944->38|1754->821|1783->829|1819->838|2011->1000
+                  LINES: 26->1|29->1|31->3|31->3|31->3|33->5|55->27|55->27|56->28|66->38
                   -- GENERATED --
               */
           

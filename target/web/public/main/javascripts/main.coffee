@@ -9,7 +9,21 @@ $(document).ready ->
 	picker = $input.pickadate('picker');
 	picker.open();
 	picker.on 'set', (data) ->
-	  $.get('/temperature/show/' + thingValue).done((data) ->
+	  
+ 	if data.select != undefined
+  	
+	  $.get('/temperature/show/' + data.select).done((data) ->
+				console.log 'second success'
+				return
+		).fail((data) ->
+				  console.log 'error'
+				  return
+		).always (data) ->
+				  $('.fa-spin').hide()
+				  return
+
+ 	
+ 		$.get('/failure/show/' + data.select).done((data) ->
 				console.log 'second success'
 				return
 		).fail((data) ->
@@ -19,7 +33,6 @@ $(document).ready ->
 				  $('.fa-spin').hide()
 				  return
   		return
- 	
 	 $(".fa-spin").show();
 	 console.log 'creao oggetto e stampo';
 return
