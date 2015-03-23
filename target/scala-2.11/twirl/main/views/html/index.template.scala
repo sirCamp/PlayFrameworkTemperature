@@ -41,10 +41,17 @@ Seq[Any](format.raw/*1.19*/("""
 				"""),format.raw/*13.5*/("""show: true
 			"""),format.raw/*14.4*/("""}"""),format.raw/*14.5*/(""",
 			xaxis: """),format.raw/*15.11*/("""{"""),format.raw/*15.12*/("""
-				"""),format.raw/*16.5*/("""tickDecimals: 0,
-				tickSize: 1
-			"""),format.raw/*18.4*/("""}"""),format.raw/*18.5*/("""
-		"""),format.raw/*19.3*/("""}"""),format.raw/*19.4*/(""";
+						"""),format.raw/*16.7*/("""color: '#eee',
+			          	axisLabel: "Ore ",
+			          	axisLabelUseCanvas: true,
+			          	axisLabelFontSizePixels: 12,
+			          	axisLabelFontFamily: 'Verdana, Arial',
+			          	axisLabelPadding: 10,
+			          	mode: "time",
+			          	timeformat: "%H"
+						//minTickSize: [1, "hour"]
+			"""),format.raw/*25.4*/("""}"""),format.raw/*25.5*/("""
+		"""),format.raw/*26.3*/("""}"""),format.raw/*26.4*/(""";
 
 		var data = [];
 
@@ -52,19 +59,19 @@ Seq[Any](format.raw/*1.19*/("""
 
 		// Fetch one series, adding to what we already have
 
-		var alreadyFetched = """),format.raw/*27.24*/("""{"""),format.raw/*27.25*/("""}"""),format.raw/*27.26*/(""";
+		var alreadyFetched = """),format.raw/*34.24*/("""{"""),format.raw/*34.25*/("""}"""),format.raw/*34.26*/(""";
 
-		$("button.fetchSeries").click(function () """),format.raw/*29.45*/("""{"""),format.raw/*29.46*/("""
+		$("button.fetchSeries").click(function () """),format.raw/*36.45*/("""{"""),format.raw/*36.46*/("""
 
-			"""),format.raw/*31.4*/("""var button = $(this);
+			"""),format.raw/*38.4*/("""var button = $(this);
 
 			// Find the URL in the link right next to us, then fetch the data
 
 			var dataurl = button.siblings("a").attr("href");
 
-			function onDataReceived(series) """),format.raw/*37.36*/("""{"""),format.raw/*37.37*/("""
+			function onDataReceived(series) """),format.raw/*44.36*/("""{"""),format.raw/*44.37*/("""
 
-				"""),format.raw/*39.5*/("""// Extract the first coordinate pair; jQuery has parsed it, so
+				"""),format.raw/*46.5*/("""// Extract the first coordinate pair; jQuery has parsed it, so
 				// the data is now just an ordinary JavaScript object
 
 				var firstcoordinate = "(" + series.data[0][0] + ", " + series.data[0][1] + ")";
@@ -72,67 +79,68 @@ Seq[Any](format.raw/*1.19*/("""
 
 				// Push the new data onto our existing data array
 
-				if (!alreadyFetched[series.label]) """),format.raw/*47.40*/("""{"""),format.raw/*47.41*/("""
-					"""),format.raw/*48.6*/("""alreadyFetched[series.label] = true;
+				if (!alreadyFetched[series.label]) """),format.raw/*54.40*/("""{"""),format.raw/*54.41*/("""
+					"""),format.raw/*55.6*/("""alreadyFetched[series.label] = true;
 					data.push(series);
-				"""),format.raw/*50.5*/("""}"""),format.raw/*50.6*/("""
+				"""),format.raw/*57.5*/("""}"""),format.raw/*57.6*/("""
 
-				"""),format.raw/*52.5*/("""$.plot("#placeholder", data, options);
-			"""),format.raw/*53.4*/("""}"""),format.raw/*53.5*/("""
+				"""),format.raw/*59.5*/("""$.plot("#placeholder", data, options);
+			"""),format.raw/*60.4*/("""}"""),format.raw/*60.5*/("""
 
-			"""),format.raw/*55.4*/("""$.ajax("""),format.raw/*55.11*/("""{"""),format.raw/*55.12*/("""
-				"""),format.raw/*56.5*/("""url: dataurl,
+			"""),format.raw/*62.4*/("""$.ajax("""),format.raw/*62.11*/("""{"""),format.raw/*62.12*/("""
+				"""),format.raw/*63.5*/("""url: dataurl,
 				type: "GET",
 				dataType: "json",
 				success: onDataReceived
-			"""),format.raw/*60.4*/("""}"""),format.raw/*60.5*/(""");
-		"""),format.raw/*61.3*/("""}"""),format.raw/*61.4*/(""");
+			"""),format.raw/*67.4*/("""}"""),format.raw/*67.5*/(""");
+		"""),format.raw/*68.3*/("""}"""),format.raw/*68.4*/(""");
 
 		// Initiate a recurring data update
 
-		$("button.dataUpdate").click(function () """),format.raw/*65.44*/("""{"""),format.raw/*65.45*/("""
+		$("button.dataUpdate").click(function () """),format.raw/*72.44*/("""{"""),format.raw/*72.45*/("""
 
-			"""),format.raw/*67.4*/("""data = [];
-			alreadyFetched = """),format.raw/*68.21*/("""{"""),format.raw/*68.22*/("""}"""),format.raw/*68.23*/(""";
+			"""),format.raw/*74.4*/("""data = [];
+			alreadyFetched = """),format.raw/*75.21*/("""{"""),format.raw/*75.22*/("""}"""),format.raw/*75.23*/(""";
 
-			$.plot("#placeholder", data, options);
+			//$.plot("#placeholder", data, options);
 
 			var iteration = 0;
 
-			function fetchData() """),format.raw/*74.25*/("""{"""),format.raw/*74.26*/("""
+			function fetchData() """),format.raw/*81.25*/("""{"""),format.raw/*81.26*/("""
 
-				"""),format.raw/*76.5*/("""++iteration;
+				"""),format.raw/*83.5*/("""++iteration;
 
-				function onDataReceived(series) """),format.raw/*78.37*/("""{"""),format.raw/*78.38*/("""
+				function onDataReceived(series) """),format.raw/*85.37*/("""{"""),format.raw/*85.38*/("""
 
-					"""),format.raw/*80.6*/("""// Load all the data in one pass; if we only got partial
+					"""),format.raw/*87.6*/("""// Load all the data in one pass; if we only got partial
 					// data we could merge it with what we already have.
 
 					data = [ series ];
-					$.plot("#placeholder", data, options);
-				"""),format.raw/*85.5*/("""}"""),format.raw/*85.6*/("""
 
-				"""),format.raw/*87.5*/("""// Normally we call the same URL - a script connected to a
+					$.plot("#placeholder", data, options);
+				"""),format.raw/*93.5*/("""}"""),format.raw/*93.6*/("""
+
+				"""),format.raw/*95.5*/("""// Normally we call the same URL - a script connected to a
 				// database - but in this case we only have static example
 				// files, so we need to modify the URL.
 
-				$.ajax("""),format.raw/*91.12*/("""{"""),format.raw/*91.13*/("""
-					"""),format.raw/*92.6*/("""url: "data-eu-gdp-growth-" + iteration + ".json",
+				$.ajax("""),format.raw/*99.12*/("""{"""),format.raw/*99.13*/("""
+					"""),format.raw/*100.6*/("""url: "data-eu-gdp-growth-" + iteration + ".json",
 					type: "GET",
 					dataType: "json",
 					success: onDataReceived
-				"""),format.raw/*96.5*/("""}"""),format.raw/*96.6*/(""");
+				"""),format.raw/*104.5*/("""}"""),format.raw/*104.6*/(""");
 
-				if (iteration < 5) """),format.raw/*98.24*/("""{"""),format.raw/*98.25*/("""
-					"""),format.raw/*99.6*/("""setTimeout(fetchData, 1000);
-				"""),format.raw/*100.5*/("""}"""),format.raw/*100.6*/(""" """),format.raw/*100.7*/("""else """),format.raw/*100.12*/("""{"""),format.raw/*100.13*/("""
-					"""),format.raw/*101.6*/("""data = [];
-					alreadyFetched = """),format.raw/*102.23*/("""{"""),format.raw/*102.24*/("""}"""),format.raw/*102.25*/(""";
-				"""),format.raw/*103.5*/("""}"""),format.raw/*103.6*/("""
-			"""),format.raw/*104.4*/("""}"""),format.raw/*104.5*/("""
+				if (iteration < 5) """),format.raw/*106.24*/("""{"""),format.raw/*106.25*/("""
+					"""),format.raw/*107.6*/("""setTimeout(fetchData, 1000);
+				"""),format.raw/*108.5*/("""}"""),format.raw/*108.6*/(""" """),format.raw/*108.7*/("""else """),format.raw/*108.12*/("""{"""),format.raw/*108.13*/("""
+					"""),format.raw/*109.6*/("""data = [];
+					alreadyFetched = """),format.raw/*110.23*/("""{"""),format.raw/*110.24*/("""}"""),format.raw/*110.25*/(""";
+				"""),format.raw/*111.5*/("""}"""),format.raw/*111.6*/("""
+			"""),format.raw/*112.4*/("""}"""),format.raw/*112.5*/("""
 
-			"""),format.raw/*106.4*/("""setTimeout(fetchData, 1000);
-		"""),format.raw/*107.3*/("""}"""),format.raw/*107.4*/(""");
+			"""),format.raw/*114.4*/("""setTimeout(fetchData, 1000);
+		"""),format.raw/*115.3*/("""}"""),format.raw/*115.4*/(""");
 
 		// Load the first series by default, so we don't have an empty plot
 
@@ -141,7 +149,7 @@ Seq[Any](format.raw/*1.19*/("""
 		// Add the Flot version string to the footer
 
 		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
-	"""),format.raw/*116.2*/("""}"""),format.raw/*116.3*/(""");</script>
+	"""),format.raw/*124.2*/("""}"""),format.raw/*124.3*/(""");</script>
 	<div class="row">
     	
     		<div class="col l6 m12 s12  ">
@@ -149,19 +157,19 @@ Seq[Any](format.raw/*1.19*/("""
 	    		<div class="col s12">
 	    				<p>
 			<button class="fetchSeries">First dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-eu-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 
 		<p>
 			<button class="fetchSeries">Second dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-japan-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 
 		<p>
 			<button class="fetchSeries">Third dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-usa-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 	    			<h3><span class="fa fa-file"></span>Misuration</h3>
@@ -181,8 +189,8 @@ Seq[Any](format.raw/*1.19*/("""
 	    		<div class="col s12">
 	    			<h3><span class="fa fa-warning"></span>Failure</h3>
 	    			<div style="border:1px solid black; min-height:200px;">
-	    				"""),_display_(/*156.11*/loader()),format.raw/*156.19*/("""
-	    			"""),format.raw/*157.9*/("""</div>
+	    				"""),_display_(/*164.11*/loader()),format.raw/*164.19*/("""
+	    			"""),format.raw/*165.9*/("""</div>
 	    		</div>
     		
     		</div>
@@ -192,7 +200,7 @@ Seq[Any](format.raw/*1.19*/("""
          
     </div>   
 
-""")))}),format.raw/*167.2*/("""
+""")))}),format.raw/*175.2*/("""
 """))}
   }
 
@@ -205,11 +213,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 22 22:27:24 CET 2015
+                  DATE: Mon Mar 23 11:13:05 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/index.scala.html
-                  HASH: 6270444f4315199b9471b906d31a8b241c648f8e
-                  MATRIX: 723->1|828->18|856->21|876->33|915->35|943->37|1017->84|1045->85|1075->89|1116->103|1144->104|1174->108|1208->115|1236->116|1268->121|1309->135|1337->136|1378->149|1407->150|1439->155|1480->169|1508->170|1548->182|1577->183|1609->188|1672->224|1700->225|1730->228|1758->229|1927->370|1956->371|1985->372|2060->419|2089->420|2121->425|2330->606|2359->607|2392->613|2820->1013|2849->1014|2882->1020|2974->1085|3002->1086|3035->1092|3104->1134|3132->1135|3164->1140|3199->1147|3228->1148|3260->1153|3371->1237|3399->1238|3431->1243|3459->1244|3573->1330|3602->1331|3634->1336|3693->1367|3722->1368|3751->1369|3872->1462|3901->1463|3934->1469|4012->1519|4041->1520|4075->1527|4290->1715|4318->1716|4351->1722|4557->1900|4586->1901|4619->1907|4770->2031|4798->2032|4853->2059|4882->2060|4915->2066|4976->2099|5005->2100|5034->2101|5068->2106|5098->2107|5132->2113|5194->2146|5224->2147|5254->2148|5288->2154|5317->2155|5349->2159|5378->2160|5411->2165|5470->2196|5499->2197|5757->2427|5786->2428|7189->3803|7219->3811|7256->3820|7449->3982
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|34->6|34->6|36->8|36->8|36->8|37->9|37->9|37->9|38->10|39->11|39->11|40->12|40->12|41->13|42->14|42->14|43->15|43->15|44->16|46->18|46->18|47->19|47->19|55->27|55->27|55->27|57->29|57->29|59->31|65->37|65->37|67->39|75->47|75->47|76->48|78->50|78->50|80->52|81->53|81->53|83->55|83->55|83->55|84->56|88->60|88->60|89->61|89->61|93->65|93->65|95->67|96->68|96->68|96->68|102->74|102->74|104->76|106->78|106->78|108->80|113->85|113->85|115->87|119->91|119->91|120->92|124->96|124->96|126->98|126->98|127->99|128->100|128->100|128->100|128->100|128->100|129->101|130->102|130->102|130->102|131->103|131->103|132->104|132->104|134->106|135->107|135->107|144->116|144->116|184->156|184->156|185->157|195->167
+                  HASH: 52f392f12f1c8d80d34616bd37f0d4336d6ef6e0
+                  MATRIX: 723->1|828->18|856->21|876->33|915->35|943->37|1017->84|1045->85|1075->89|1116->103|1144->104|1174->108|1208->115|1236->116|1268->121|1309->135|1337->136|1378->149|1407->150|1439->155|1480->169|1508->170|1548->182|1577->183|1611->190|1953->505|1981->506|2011->509|2039->510|2208->651|2237->652|2266->653|2341->700|2370->701|2402->706|2611->887|2640->888|2673->894|3101->1294|3130->1295|3163->1301|3255->1366|3283->1367|3316->1373|3385->1415|3413->1416|3445->1421|3480->1428|3509->1429|3541->1434|3652->1518|3680->1519|3712->1524|3740->1525|3854->1611|3883->1612|3915->1617|3974->1648|4003->1649|4032->1650|4155->1745|4184->1746|4217->1752|4295->1802|4324->1803|4358->1810|4574->1999|4602->2000|4635->2006|4841->2184|4870->2185|4904->2191|5056->2315|5085->2316|5141->2343|5171->2344|5205->2350|5266->2383|5295->2384|5324->2385|5358->2390|5388->2391|5422->2397|5484->2430|5514->2431|5544->2432|5578->2438|5607->2439|5639->2443|5668->2444|5701->2449|5760->2480|5789->2481|6047->2711|6076->2712|7388->3996|7418->4004|7455->4013|7648->4175
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|34->6|34->6|36->8|36->8|36->8|37->9|37->9|37->9|38->10|39->11|39->11|40->12|40->12|41->13|42->14|42->14|43->15|43->15|44->16|53->25|53->25|54->26|54->26|62->34|62->34|62->34|64->36|64->36|66->38|72->44|72->44|74->46|82->54|82->54|83->55|85->57|85->57|87->59|88->60|88->60|90->62|90->62|90->62|91->63|95->67|95->67|96->68|96->68|100->72|100->72|102->74|103->75|103->75|103->75|109->81|109->81|111->83|113->85|113->85|115->87|121->93|121->93|123->95|127->99|127->99|128->100|132->104|132->104|134->106|134->106|135->107|136->108|136->108|136->108|136->108|136->108|137->109|138->110|138->110|138->110|139->111|139->111|140->112|140->112|142->114|143->115|143->115|152->124|152->124|192->164|192->164|193->165|203->175
                   -- GENERATED --
               */
           

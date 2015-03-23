@@ -13,8 +13,15 @@
 				show: true
 			},
 			xaxis: {
-				tickDecimals: 0,
-				tickSize: 1
+						color: '#eee',
+			          	axisLabel: "Ore ",
+			          	axisLabelUseCanvas: true,
+			          	axisLabelFontSizePixels: 12,
+			          	axisLabelFontFamily: 'Verdana, Arial',
+			          	axisLabelPadding: 10,
+			          	mode: "time",
+			          	timeformat: "%H"
+						//minTickSize: [1, "hour"]
 			}
 		};
 
@@ -67,7 +74,7 @@
 			data = [];
 			alreadyFetched = {};
 
-			$.plot("#placeholder", data, options);
+			//$.plot("#placeholder", data, options);
 
 			var iteration = 0;
 
@@ -81,6 +88,7 @@
 					// data we could merge it with what we already have.
 
 					data = [ series ];
+
 					$.plot("#placeholder", data, options);
 				}
 
@@ -121,19 +129,19 @@
 	    		<div class="col s12">
 	    				<p>
 			<button class="fetchSeries">First dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-eu-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 
 		<p>
 			<button class="fetchSeries">Second dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-japan-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 
 		<p>
 			<button class="fetchSeries">Third dataset</button>
-			[ <a href="http://www.flotcharts.org/flot/examples/ajax/data-usa-gdp-growth.json">see data</a> ]
+			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
 	    			<h3><span class="fa fa-file"></span>Misuration</h3>
