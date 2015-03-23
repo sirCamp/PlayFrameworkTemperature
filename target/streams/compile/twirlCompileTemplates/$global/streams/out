@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/stefano/Repository/PlayFrameworkTemperature/app/views/index.scala.html:204: Not parsed?[0m
+[0m[[31merror[0m] [0m}[0m
+[0m[[31merror[0m] [0m^[0m
+[0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

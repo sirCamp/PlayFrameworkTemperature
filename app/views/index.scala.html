@@ -6,24 +6,82 @@
 	$(function() {
 
 		var options = {
-			lines: {
-				show: true
-			},
-			points: {
-				show: true
-			},
+
+						series: {
+							lines: {
+					            show: true,
+					            fill: true,
+					            lineWidth: 1,
+					            fillColor: {
+						            colors: [ 
+						            	{ color: "#FFA500",opacity: 0.5 },
+						            	{ opacity: 0.5 },
+						            	{ opacity: 0.5 },
+						            	{ opacity: 0.5 },
+						            	{ opacity: 0.5 },
+						            	{ opacity: 0.5 },
+						                { opacity: 0.5 }
+						            ]
+					            }
+				          	},
+						points: {
+			            	show: true
+			          	},
+			          	shadowSize: 1
+					},
+					  
+					legend: {
+			        	position: 'nw'
+			        },
+					grid: {
+			          hoverable: true,
+			          clickable: true,
+			          borderColor: '#ddd',
+			          borderWidth: 1,
+			          labelMargin: 10,
+			          backgroundColor: '#fff'
+			        },
+			
+			yaxis: {
+					  
+			    /*min: -70,
+			    max: 70,*/
+			    color: '#eee',
+				axisLabel: "Temperature",
+				axisLabelUseCanvas: true,
+				axisLabelFontSizePixels: 12,
+				axisLabelFontFamily: 'Verdana, Arial',
+				axisLabelPadding: 5,
+				tickSize: 5     	
+
+			},			
 			xaxis: {
-						color: '#eee',
-			          	axisLabel: "Ore ",
-			          	axisLabelUseCanvas: true,
-			          	axisLabelFontSizePixels: 12,
-			          	axisLabelFontFamily: 'Verdana, Arial',
-			          	axisLabelPadding: 10,
-			          	mode: "time",
-			          	timeformat: "%H"
-						//minTickSize: [1, "hour"]
-			}
-		};
+				color: '#eee',
+			    axisLabel: "Ore ",
+			    axisLabelUseCanvas: true,
+			    axisLabelFontSizePixels: 12,
+			    axisLabelFontFamily: 'Verdana, Arial',
+			    axisLabelPadding: 10,
+			    mode: "time",
+			    timeformat: "%H",
+				tickSize: [1, "hour"]
+			},
+			        zoom: {
+						interactive: true
+					},
+					pan: {
+						interactive: true
+					}
+			};
+			$("<div id='tooltip'></div>").css({
+				position: "absolute",
+				display: "none",
+				border: "1px solid #fdd",
+				padding: "2px",
+				"background-color": "#fee",
+				opacity: 0.9
+			}).appendTo("body");
+		
 
 		var data = [];
 

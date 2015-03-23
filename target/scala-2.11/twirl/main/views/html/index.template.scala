@@ -34,24 +34,82 @@ Seq[Any](format.raw/*1.19*/("""
 	$(function() """),format.raw/*6.15*/("""{"""),format.raw/*6.16*/("""
 
 		"""),format.raw/*8.3*/("""var options = """),format.raw/*8.17*/("""{"""),format.raw/*8.18*/("""
-			"""),format.raw/*9.4*/("""lines: """),format.raw/*9.11*/("""{"""),format.raw/*9.12*/("""
-				"""),format.raw/*10.5*/("""show: true
-			"""),format.raw/*11.4*/("""}"""),format.raw/*11.5*/(""",
-			points: """),format.raw/*12.12*/("""{"""),format.raw/*12.13*/("""
-				"""),format.raw/*13.5*/("""show: true
-			"""),format.raw/*14.4*/("""}"""),format.raw/*14.5*/(""",
-			xaxis: """),format.raw/*15.11*/("""{"""),format.raw/*15.12*/("""
-						"""),format.raw/*16.7*/("""color: '#eee',
-			          	axisLabel: "Ore ",
-			          	axisLabelUseCanvas: true,
-			          	axisLabelFontSizePixels: 12,
-			          	axisLabelFontFamily: 'Verdana, Arial',
-			          	axisLabelPadding: 10,
-			          	mode: "time",
-			          	timeformat: "%H"
-						//minTickSize: [1, "hour"]
-			"""),format.raw/*25.4*/("""}"""),format.raw/*25.5*/("""
-		"""),format.raw/*26.3*/("""}"""),format.raw/*26.4*/(""";
+
+						"""),format.raw/*10.7*/("""series: """),format.raw/*10.15*/("""{"""),format.raw/*10.16*/("""
+							"""),format.raw/*11.8*/("""lines: """),format.raw/*11.15*/("""{"""),format.raw/*11.16*/("""
+					            """),format.raw/*12.18*/("""show: true,
+					            fill: true,
+					            lineWidth: 1,
+					            fillColor: """),format.raw/*15.29*/("""{"""),format.raw/*15.30*/("""
+						            """),format.raw/*16.19*/("""colors: [ 
+						            	"""),format.raw/*17.20*/("""{"""),format.raw/*17.21*/(""" """),format.raw/*17.22*/("""color: "#FFA500",opacity: 0.5 """),format.raw/*17.52*/("""}"""),format.raw/*17.53*/(""",
+						            	"""),format.raw/*18.20*/("""{"""),format.raw/*18.21*/(""" """),format.raw/*18.22*/("""opacity: 0.5 """),format.raw/*18.35*/("""}"""),format.raw/*18.36*/(""",
+						            	"""),format.raw/*19.20*/("""{"""),format.raw/*19.21*/(""" """),format.raw/*19.22*/("""opacity: 0.5 """),format.raw/*19.35*/("""}"""),format.raw/*19.36*/(""",
+						            	"""),format.raw/*20.20*/("""{"""),format.raw/*20.21*/(""" """),format.raw/*20.22*/("""opacity: 0.5 """),format.raw/*20.35*/("""}"""),format.raw/*20.36*/(""",
+						            	"""),format.raw/*21.20*/("""{"""),format.raw/*21.21*/(""" """),format.raw/*21.22*/("""opacity: 0.5 """),format.raw/*21.35*/("""}"""),format.raw/*21.36*/(""",
+						            	"""),format.raw/*22.20*/("""{"""),format.raw/*22.21*/(""" """),format.raw/*22.22*/("""opacity: 0.5 """),format.raw/*22.35*/("""}"""),format.raw/*22.36*/(""",
+						                """),format.raw/*23.23*/("""{"""),format.raw/*23.24*/(""" """),format.raw/*23.25*/("""opacity: 0.5 """),format.raw/*23.38*/("""}"""),format.raw/*23.39*/("""
+						            """),format.raw/*24.19*/("""]
+					            """),format.raw/*25.18*/("""}"""),format.raw/*25.19*/("""
+				          	"""),format.raw/*26.16*/("""}"""),format.raw/*26.17*/(""",
+						points: """),format.raw/*27.15*/("""{"""),format.raw/*27.16*/("""
+			            	"""),format.raw/*28.17*/("""show: true
+			          	"""),format.raw/*29.15*/("""}"""),format.raw/*29.16*/(""",
+			          	shadowSize: 1
+					"""),format.raw/*31.6*/("""}"""),format.raw/*31.7*/(""",
+					  
+					legend: """),format.raw/*33.14*/("""{"""),format.raw/*33.15*/("""
+			        	"""),format.raw/*34.13*/("""position: 'nw'
+			        """),format.raw/*35.12*/("""}"""),format.raw/*35.13*/(""",
+					grid: """),format.raw/*36.12*/("""{"""),format.raw/*36.13*/("""
+			          """),format.raw/*37.14*/("""hoverable: true,
+			          clickable: true,
+			          borderColor: '#ddd',
+			          borderWidth: 1,
+			          labelMargin: 10,
+			          backgroundColor: '#fff'
+			        """),format.raw/*43.12*/("""}"""),format.raw/*43.13*/(""",
+			
+			yaxis: """),format.raw/*45.11*/("""{"""),format.raw/*45.12*/("""
+					  
+			    """),format.raw/*47.8*/("""/*min: -70,
+			    max: 70,*/
+			    color: '#eee',
+				axisLabel: "Temperature",
+				axisLabelUseCanvas: true,
+				axisLabelFontSizePixels: 12,
+				axisLabelFontFamily: 'Verdana, Arial',
+				axisLabelPadding: 5,
+				tickSize: 5     	
+
+			"""),format.raw/*57.4*/("""}"""),format.raw/*57.5*/(""",			
+			xaxis: """),format.raw/*58.11*/("""{"""),format.raw/*58.12*/("""
+				"""),format.raw/*59.5*/("""color: '#eee',
+			    axisLabel: "Ore ",
+			    axisLabelUseCanvas: true,
+			    axisLabelFontSizePixels: 12,
+			    axisLabelFontFamily: 'Verdana, Arial',
+			    axisLabelPadding: 10,
+			    mode: "time",
+			    timeformat: "%H",
+				tickSize: [1, "hour"]
+			"""),format.raw/*68.4*/("""}"""),format.raw/*68.5*/(""",
+			        zoom: """),format.raw/*69.18*/("""{"""),format.raw/*69.19*/("""
+						"""),format.raw/*70.7*/("""interactive: true
+					"""),format.raw/*71.6*/("""}"""),format.raw/*71.7*/(""",
+					pan: """),format.raw/*72.11*/("""{"""),format.raw/*72.12*/("""
+						"""),format.raw/*73.7*/("""interactive: true
+					"""),format.raw/*74.6*/("""}"""),format.raw/*74.7*/("""
+			"""),format.raw/*75.4*/("""}"""),format.raw/*75.5*/(""";
+			$("<div id='tooltip'></div>").css("""),format.raw/*76.38*/("""{"""),format.raw/*76.39*/("""
+				"""),format.raw/*77.5*/("""position: "absolute",
+				display: "none",
+				border: "1px solid #fdd",
+				padding: "2px",
+				"background-color": "#fee",
+				opacity: 0.9
+			"""),format.raw/*83.4*/("""}"""),format.raw/*83.5*/(""").appendTo("body");
+		
 
 		var data = [];
 
@@ -59,19 +117,19 @@ Seq[Any](format.raw/*1.19*/("""
 
 		// Fetch one series, adding to what we already have
 
-		var alreadyFetched = """),format.raw/*34.24*/("""{"""),format.raw/*34.25*/("""}"""),format.raw/*34.26*/(""";
+		var alreadyFetched = """),format.raw/*92.24*/("""{"""),format.raw/*92.25*/("""}"""),format.raw/*92.26*/(""";
 
-		$("button.fetchSeries").click(function () """),format.raw/*36.45*/("""{"""),format.raw/*36.46*/("""
+		$("button.fetchSeries").click(function () """),format.raw/*94.45*/("""{"""),format.raw/*94.46*/("""
 
-			"""),format.raw/*38.4*/("""var button = $(this);
+			"""),format.raw/*96.4*/("""var button = $(this);
 
 			// Find the URL in the link right next to us, then fetch the data
 
 			var dataurl = button.siblings("a").attr("href");
 
-			function onDataReceived(series) """),format.raw/*44.36*/("""{"""),format.raw/*44.37*/("""
+			function onDataReceived(series) """),format.raw/*102.36*/("""{"""),format.raw/*102.37*/("""
 
-				"""),format.raw/*46.5*/("""// Extract the first coordinate pair; jQuery has parsed it, so
+				"""),format.raw/*104.5*/("""// Extract the first coordinate pair; jQuery has parsed it, so
 				// the data is now just an ordinary JavaScript object
 
 				var firstcoordinate = "(" + series.data[0][0] + ", " + series.data[0][1] + ")";
@@ -79,68 +137,68 @@ Seq[Any](format.raw/*1.19*/("""
 
 				// Push the new data onto our existing data array
 
-				if (!alreadyFetched[series.label]) """),format.raw/*54.40*/("""{"""),format.raw/*54.41*/("""
-					"""),format.raw/*55.6*/("""alreadyFetched[series.label] = true;
+				if (!alreadyFetched[series.label]) """),format.raw/*112.40*/("""{"""),format.raw/*112.41*/("""
+					"""),format.raw/*113.6*/("""alreadyFetched[series.label] = true;
 					data.push(series);
-				"""),format.raw/*57.5*/("""}"""),format.raw/*57.6*/("""
+				"""),format.raw/*115.5*/("""}"""),format.raw/*115.6*/("""
 
-				"""),format.raw/*59.5*/("""$.plot("#placeholder", data, options);
-			"""),format.raw/*60.4*/("""}"""),format.raw/*60.5*/("""
+				"""),format.raw/*117.5*/("""$.plot("#placeholder", data, options);
+			"""),format.raw/*118.4*/("""}"""),format.raw/*118.5*/("""
 
-			"""),format.raw/*62.4*/("""$.ajax("""),format.raw/*62.11*/("""{"""),format.raw/*62.12*/("""
-				"""),format.raw/*63.5*/("""url: dataurl,
+			"""),format.raw/*120.4*/("""$.ajax("""),format.raw/*120.11*/("""{"""),format.raw/*120.12*/("""
+				"""),format.raw/*121.5*/("""url: dataurl,
 				type: "GET",
 				dataType: "json",
 				success: onDataReceived
-			"""),format.raw/*67.4*/("""}"""),format.raw/*67.5*/(""");
-		"""),format.raw/*68.3*/("""}"""),format.raw/*68.4*/(""");
+			"""),format.raw/*125.4*/("""}"""),format.raw/*125.5*/(""");
+		"""),format.raw/*126.3*/("""}"""),format.raw/*126.4*/(""");
 
 		// Initiate a recurring data update
 
-		$("button.dataUpdate").click(function () """),format.raw/*72.44*/("""{"""),format.raw/*72.45*/("""
+		$("button.dataUpdate").click(function () """),format.raw/*130.44*/("""{"""),format.raw/*130.45*/("""
 
-			"""),format.raw/*74.4*/("""data = [];
-			alreadyFetched = """),format.raw/*75.21*/("""{"""),format.raw/*75.22*/("""}"""),format.raw/*75.23*/(""";
+			"""),format.raw/*132.4*/("""data = [];
+			alreadyFetched = """),format.raw/*133.21*/("""{"""),format.raw/*133.22*/("""}"""),format.raw/*133.23*/(""";
 
 			//$.plot("#placeholder", data, options);
 
 			var iteration = 0;
 
-			function fetchData() """),format.raw/*81.25*/("""{"""),format.raw/*81.26*/("""
+			function fetchData() """),format.raw/*139.25*/("""{"""),format.raw/*139.26*/("""
 
-				"""),format.raw/*83.5*/("""++iteration;
+				"""),format.raw/*141.5*/("""++iteration;
 
-				function onDataReceived(series) """),format.raw/*85.37*/("""{"""),format.raw/*85.38*/("""
+				function onDataReceived(series) """),format.raw/*143.37*/("""{"""),format.raw/*143.38*/("""
 
-					"""),format.raw/*87.6*/("""// Load all the data in one pass; if we only got partial
+					"""),format.raw/*145.6*/("""// Load all the data in one pass; if we only got partial
 					// data we could merge it with what we already have.
 
 					data = [ series ];
 
 					$.plot("#placeholder", data, options);
-				"""),format.raw/*93.5*/("""}"""),format.raw/*93.6*/("""
+				"""),format.raw/*151.5*/("""}"""),format.raw/*151.6*/("""
 
-				"""),format.raw/*95.5*/("""// Normally we call the same URL - a script connected to a
+				"""),format.raw/*153.5*/("""// Normally we call the same URL - a script connected to a
 				// database - but in this case we only have static example
 				// files, so we need to modify the URL.
 
-				$.ajax("""),format.raw/*99.12*/("""{"""),format.raw/*99.13*/("""
-					"""),format.raw/*100.6*/("""url: "data-eu-gdp-growth-" + iteration + ".json",
+				$.ajax("""),format.raw/*157.12*/("""{"""),format.raw/*157.13*/("""
+					"""),format.raw/*158.6*/("""url: "data-eu-gdp-growth-" + iteration + ".json",
 					type: "GET",
 					dataType: "json",
 					success: onDataReceived
-				"""),format.raw/*104.5*/("""}"""),format.raw/*104.6*/(""");
+				"""),format.raw/*162.5*/("""}"""),format.raw/*162.6*/(""");
 
-				if (iteration < 5) """),format.raw/*106.24*/("""{"""),format.raw/*106.25*/("""
-					"""),format.raw/*107.6*/("""setTimeout(fetchData, 1000);
-				"""),format.raw/*108.5*/("""}"""),format.raw/*108.6*/(""" """),format.raw/*108.7*/("""else """),format.raw/*108.12*/("""{"""),format.raw/*108.13*/("""
-					"""),format.raw/*109.6*/("""data = [];
-					alreadyFetched = """),format.raw/*110.23*/("""{"""),format.raw/*110.24*/("""}"""),format.raw/*110.25*/(""";
-				"""),format.raw/*111.5*/("""}"""),format.raw/*111.6*/("""
-			"""),format.raw/*112.4*/("""}"""),format.raw/*112.5*/("""
+				if (iteration < 5) """),format.raw/*164.24*/("""{"""),format.raw/*164.25*/("""
+					"""),format.raw/*165.6*/("""setTimeout(fetchData, 1000);
+				"""),format.raw/*166.5*/("""}"""),format.raw/*166.6*/(""" """),format.raw/*166.7*/("""else """),format.raw/*166.12*/("""{"""),format.raw/*166.13*/("""
+					"""),format.raw/*167.6*/("""data = [];
+					alreadyFetched = """),format.raw/*168.23*/("""{"""),format.raw/*168.24*/("""}"""),format.raw/*168.25*/(""";
+				"""),format.raw/*169.5*/("""}"""),format.raw/*169.6*/("""
+			"""),format.raw/*170.4*/("""}"""),format.raw/*170.5*/("""
 
-			"""),format.raw/*114.4*/("""setTimeout(fetchData, 1000);
-		"""),format.raw/*115.3*/("""}"""),format.raw/*115.4*/(""");
+			"""),format.raw/*172.4*/("""setTimeout(fetchData, 1000);
+		"""),format.raw/*173.3*/("""}"""),format.raw/*173.4*/(""");
 
 		// Load the first series by default, so we don't have an empty plot
 
@@ -149,7 +207,7 @@ Seq[Any](format.raw/*1.19*/("""
 		// Add the Flot version string to the footer
 
 		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
-	"""),format.raw/*124.2*/("""}"""),format.raw/*124.3*/(""");</script>
+	"""),format.raw/*182.2*/("""}"""),format.raw/*182.3*/(""");</script>
 	<div class="row">
     	
     		<div class="col l6 m12 s12  ">
@@ -189,8 +247,8 @@ Seq[Any](format.raw/*1.19*/("""
 	    		<div class="col s12">
 	    			<h3><span class="fa fa-warning"></span>Failure</h3>
 	    			<div style="border:1px solid black; min-height:200px;">
-	    				"""),_display_(/*164.11*/loader()),format.raw/*164.19*/("""
-	    			"""),format.raw/*165.9*/("""</div>
+	    				"""),_display_(/*222.11*/loader()),format.raw/*222.19*/("""
+	    			"""),format.raw/*223.9*/("""</div>
 	    		</div>
     		
     		</div>
@@ -200,7 +258,7 @@ Seq[Any](format.raw/*1.19*/("""
          
     </div>   
 
-""")))}),format.raw/*175.2*/("""
+""")))}),format.raw/*233.2*/("""
 """))}
   }
 
@@ -213,11 +271,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 11:13:05 CET 2015
+                  DATE: Mon Mar 23 11:53:39 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/index.scala.html
-                  HASH: 52f392f12f1c8d80d34616bd37f0d4336d6ef6e0
-                  MATRIX: 723->1|828->18|856->21|876->33|915->35|943->37|1017->84|1045->85|1075->89|1116->103|1144->104|1174->108|1208->115|1236->116|1268->121|1309->135|1337->136|1378->149|1407->150|1439->155|1480->169|1508->170|1548->182|1577->183|1611->190|1953->505|1981->506|2011->509|2039->510|2208->651|2237->652|2266->653|2341->700|2370->701|2402->706|2611->887|2640->888|2673->894|3101->1294|3130->1295|3163->1301|3255->1366|3283->1367|3316->1373|3385->1415|3413->1416|3445->1421|3480->1428|3509->1429|3541->1434|3652->1518|3680->1519|3712->1524|3740->1525|3854->1611|3883->1612|3915->1617|3974->1648|4003->1649|4032->1650|4155->1745|4184->1746|4217->1752|4295->1802|4324->1803|4358->1810|4574->1999|4602->2000|4635->2006|4841->2184|4870->2185|4904->2191|5056->2315|5085->2316|5141->2343|5171->2344|5205->2350|5266->2383|5295->2384|5324->2385|5358->2390|5388->2391|5422->2397|5484->2430|5514->2431|5544->2432|5578->2438|5607->2439|5639->2443|5668->2444|5701->2449|5760->2480|5789->2481|6047->2711|6076->2712|7388->3996|7418->4004|7455->4013|7648->4175
-                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|34->6|34->6|36->8|36->8|36->8|37->9|37->9|37->9|38->10|39->11|39->11|40->12|40->12|41->13|42->14|42->14|43->15|43->15|44->16|53->25|53->25|54->26|54->26|62->34|62->34|62->34|64->36|64->36|66->38|72->44|72->44|74->46|82->54|82->54|83->55|85->57|85->57|87->59|88->60|88->60|90->62|90->62|90->62|91->63|95->67|95->67|96->68|96->68|100->72|100->72|102->74|103->75|103->75|103->75|109->81|109->81|111->83|113->85|113->85|115->87|121->93|121->93|123->95|127->99|127->99|128->100|132->104|132->104|134->106|134->106|135->107|136->108|136->108|136->108|136->108|136->108|137->109|138->110|138->110|138->110|139->111|139->111|140->112|140->112|142->114|143->115|143->115|152->124|152->124|192->164|192->164|193->165|203->175
+                  HASH: b2bd8d1195401f6a887836143e263a78ef243ab8
+                  MATRIX: 723->1|828->18|856->21|876->33|915->35|943->37|1017->84|1045->85|1075->89|1116->103|1144->104|1179->112|1215->120|1244->121|1279->129|1314->136|1343->137|1389->155|1517->255|1546->256|1593->275|1651->305|1680->306|1709->307|1767->337|1796->338|1845->359|1874->360|1903->361|1944->374|1973->375|2022->396|2051->397|2080->398|2121->411|2150->412|2199->433|2228->434|2257->435|2298->448|2327->449|2376->470|2405->471|2434->472|2475->485|2504->486|2553->507|2582->508|2611->509|2652->522|2681->523|2733->547|2762->548|2791->549|2832->562|2861->563|2908->582|2955->601|2984->602|3028->618|3057->619|3101->635|3130->636|3175->653|3228->678|3257->679|3319->714|3347->715|3398->738|3427->739|3468->752|3522->778|3551->779|3592->792|3621->793|3663->807|3879->995|3908->996|3952->1012|3981->1013|4024->1029|4290->1268|4318->1269|4361->1284|4390->1285|4422->1290|4709->1550|4737->1551|4784->1570|4813->1571|4847->1578|4897->1601|4925->1602|4965->1614|4994->1615|5028->1622|5078->1645|5106->1646|5137->1650|5165->1651|5232->1690|5261->1691|5293->1696|5465->1841|5493->1842|5683->2004|5712->2005|5741->2006|5816->2053|5845->2054|5877->2059|6087->2240|6117->2241|6151->2247|6580->2647|6610->2648|6644->2654|6737->2719|6766->2720|6800->2726|6870->2768|6899->2769|6932->2774|6968->2781|6998->2782|7031->2787|7143->2871|7172->2872|7205->2877|7234->2878|7349->2964|7379->2965|7412->2970|7472->3001|7502->3002|7532->3003|7656->3098|7686->3099|7720->3105|7799->3155|7829->3156|7864->3163|8081->3352|8110->3353|8144->3359|8351->3537|8381->3538|8415->3544|8567->3668|8596->3669|8652->3696|8682->3697|8716->3703|8777->3736|8806->3737|8835->3738|8869->3743|8899->3744|8933->3750|8995->3783|9025->3784|9055->3785|9089->3791|9118->3792|9150->3796|9179->3797|9212->3802|9271->3833|9300->3834|9558->4064|9587->4065|10899->5349|10929->5357|10966->5366|11159->5528
+                  LINES: 26->1|29->1|31->3|31->3|31->3|32->4|34->6|34->6|36->8|36->8|36->8|38->10|38->10|38->10|39->11|39->11|39->11|40->12|43->15|43->15|44->16|45->17|45->17|45->17|45->17|45->17|46->18|46->18|46->18|46->18|46->18|47->19|47->19|47->19|47->19|47->19|48->20|48->20|48->20|48->20|48->20|49->21|49->21|49->21|49->21|49->21|50->22|50->22|50->22|50->22|50->22|51->23|51->23|51->23|51->23|51->23|52->24|53->25|53->25|54->26|54->26|55->27|55->27|56->28|57->29|57->29|59->31|59->31|61->33|61->33|62->34|63->35|63->35|64->36|64->36|65->37|71->43|71->43|73->45|73->45|75->47|85->57|85->57|86->58|86->58|87->59|96->68|96->68|97->69|97->69|98->70|99->71|99->71|100->72|100->72|101->73|102->74|102->74|103->75|103->75|104->76|104->76|105->77|111->83|111->83|120->92|120->92|120->92|122->94|122->94|124->96|130->102|130->102|132->104|140->112|140->112|141->113|143->115|143->115|145->117|146->118|146->118|148->120|148->120|148->120|149->121|153->125|153->125|154->126|154->126|158->130|158->130|160->132|161->133|161->133|161->133|167->139|167->139|169->141|171->143|171->143|173->145|179->151|179->151|181->153|185->157|185->157|186->158|190->162|190->162|192->164|192->164|193->165|194->166|194->166|194->166|194->166|194->166|195->167|196->168|196->168|196->168|197->169|197->169|198->170|198->170|200->172|201->173|201->173|210->182|210->182|250->222|250->222|251->223|261->233
                   -- GENERATED --
               */
           
