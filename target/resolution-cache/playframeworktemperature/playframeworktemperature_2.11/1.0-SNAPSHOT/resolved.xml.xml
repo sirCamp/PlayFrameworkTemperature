@@ -4,7 +4,7 @@
 		module="playframeworktemperature_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150323113912"
+		publication="20150323160512"
 	>
 		<description>
 		PlayFrameworkTemperature
@@ -43,5 +43,6 @@
 		<dependency org="com.typesafe.play" name="play-java-ebean_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.3.8" conf="compile->default(compile)"/>
+		<dependency org="com.orientechnologies" name="orientdb-graphdb" rev="2.0.5" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

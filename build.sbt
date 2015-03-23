@@ -10,5 +10,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+  "com.orientechnologies" % "orientdb-graphdb" % "2.0.5"
 )
+
+//libraryDependencies += "com.orientechnologies" % "orientdb-graphdb" % "2.0.5"

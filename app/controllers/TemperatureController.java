@@ -6,9 +6,13 @@ import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
 
+import com.orientechnologies.orient.object.db.OObjectDatabaseTx;
+
+import model.Item;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
+
 
 public class TemperatureController extends Controller {
 
@@ -16,6 +20,7 @@ public class TemperatureController extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 	
+
 	public static Result show(long data){
 		Calendar mydate = Calendar.getInstance();
 		mydate.setTimeInMillis(data);
@@ -25,6 +30,18 @@ public class TemperatureController extends Controller {
 		int day = mydate.get(Calendar.DAY_OF_MONTH);
 		int month = mydate.get(Calendar.DAY_OF_MONTH);
 		int year = mydate.get(Calendar.YEAR);
+
+		OObjectDatabaseTx db = new OObjectDatabaseTx("remote:localhost/test").open("root", "a");
+		db.getEntityManager().registerEntityClass(Person.class);
+
+		Person p = db.newInstance(Person.class);
+		//p.setName( "Luca" );
+		//p.setSurname( "Garulli" );
+		//p.setCity( new City( "Rome", "Italy" ) );
+
+		db.save( p );
+		db.close();
+		//Item.all();
 		
 		/*Vector<long> c = new Vector<long>();
 		int[] obj;
