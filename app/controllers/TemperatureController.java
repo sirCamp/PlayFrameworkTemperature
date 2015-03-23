@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
 
+import models.Temperature;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
@@ -37,6 +38,18 @@ public class TemperatureController extends Controller {
 				System.out.println(rn.nextInt(40 - (-10) +1));
 						
 		}*/
+		
+		//Task.create(new Task("e"));
+		
+		try{
+			System.out.println(Temperature.where("data","2015-03-23"));
+			Temperature.all();
+		}
+		catch(Exception e){
+			
+			System.out.println("Qualcosa è andato storto: "+e.getMessage());
+		}
+		
 		
 		/*simulazione load dati*/
 		try {

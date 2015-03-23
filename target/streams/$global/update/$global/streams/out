@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2dd674d3[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7a7c8bcf[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -1066,6 +1066,92 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0[0m
+[0m[[0mdebug[0m] [0m	found net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1[0m
+[0m[[0mdebug[0m] [0m	found net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving org.mongodb#mongo-java-driver;2.7.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.mongodb#mongo-java-driver;2.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.mongodb#mongo-java-driver;2.7.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.mongodb#mongo-java-driver;2.7.2[0m
+[0m[[0mdebug[0m] [0m	found org.mongodb#mongo-java-driver;2.7.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-mapper-asl;1.9.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.codehaus.jackson#jackson-mapper-asl;1.9.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.codehaus.jackson#jackson-mapper-asl;1.9.5[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.codehaus.jackson#jackson-mapper-asl;1.9.5[0m
+[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-mapper-asl;1.9.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-core-asl;1.9.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.codehaus.jackson#jackson-core-asl;1.9.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.codehaus.jackson#jackson-core-asl;1.9.5[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.codehaus.jackson#jackson-core-asl;1.9.5[0m
+[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-core-asl;1.9.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving de.undercouch#bson4jackson;1.3.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: de.undercouch#bson4jackson;1.3.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: de.undercouch#bson4jackson;1.3.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: de.undercouch#bson4jackson;1.3.0[0m
+[0m[[0mdebug[0m] [0m	found de.undercouch#bson4jackson;1.3.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving javax.persistence#persistence-api;1.0.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.persistence#persistence-api;1.0.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.persistence#persistence-api;1.0.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: javax.persistence#persistence-api;1.0.2[0m
+[0m[[0mdebug[0m] [0m	found javax.persistence#persistence-api;1.0.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [compile][0m
@@ -1683,6 +1769,55 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [runtime][0m
@@ -2301,6 +2436,55 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.3.8 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.3.8 {test=[default(compile)]}[0m
@@ -4267,6 +4451,55 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -4887,6 +5120,55 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT [test-internal][0m
@@ -5507,6 +5789,55 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.8->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.3.8 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->org.scala-lang#scala-library;2.11.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->de.undercouch#bson4jackson;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.7.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies de.undercouch#bson4jackson;1.3.0->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->javax.persistence#persistence-api;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->compile][0m
@@ -7027,6 +7358,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ebean_2.11;2.3.8!play-java-ebean_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.3.8!play-cache_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ws_2.11;2.3.8!play-java-ws_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0!play-mongo-jackson-mapper_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.1!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#build-link;2.3.8!build-link.jar[0m
@@ -7087,6 +7419,12 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.0.1!httpcore.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.0.1!httpclient.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-logging#commons-logging;1.1.1!commons-logging.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1!mongo-jackson-mapper.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mongodb#mongo-java-driver;2.7.2!mongo-java-driver.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.jackson#jackson-mapper-asl;1.9.5!jackson-mapper-asl.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] de.undercouch#bson4jackson;1.3.0!bson4jackson.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.persistence#persistence-api;1.0.2!persistence-api.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.jackson#jackson-core-asl;1.9.5!jackson-core-asl.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-test_2.11;2.3.8!play-test_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.11!junit.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.specs2#specs2-core_2.11;2.3.12!specs2-core_2.11.jar[0m
@@ -7157,7 +7495,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3359ms :: artifacts dl 36ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5200ms :: artifacts dl 283ms[0m
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT compile produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT runtime produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT test produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-test.xml[0m
@@ -7171,5 +7509,5 @@
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT docs produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT pom produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for playframeworktemperature#playframeworktemperature_2.11;1.0-SNAPSHOT scala-tool produced in /home/stefano/Repository/PlayFrameworkTemperature/target/resolution-cache/reports/playframeworktemperature-playframeworktemperature_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3359ms resolve - 36ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (5200ms resolve - 283ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
