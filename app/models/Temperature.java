@@ -1,11 +1,15 @@
 package models;
 
 import java.util.*;
+
 import play.modules.mongodb.jackson.MongoDB;
+
 import net.vz.mongodb.jackson.JacksonDBCollection;
 import net.vz.mongodb.jackson.Id;
 import net.vz.mongodb.jackson.ObjectId;
+
 import org.codehaus.jackson.annotate.JsonProperty;
+
 import net.vz.mongodb.jackson.DBQuery;
 
 import javax.persistence.*;
@@ -18,7 +22,7 @@ public class Temperature{
 
   public String data;
   
-  public int hour;
+  public long timestamp;
   
   public double temperature;
 
@@ -28,9 +32,9 @@ public class Temperature{
 
   }
 
-  public Temperature(String data, int hour, double temperature) {
+  public Temperature(String data, long timestamp, double temperature) {
     this.data = data;
-    this.hour = hour;
+    this.timestamp = timestamp;
     this.temperature = temperature;
   }
 
@@ -42,8 +46,8 @@ public class Temperature{
 	  Temperature.coll.save(temperature);
   }
 
-  public static void create(String data, int hour, double temperature){
-      create(new Temperature(data,hour,temperature));
+  public static void create(String data, long timestamp, double temperature){
+      create(new Temperature(data,timestamp,temperature));
   }
 
   public static void delete(String id) {

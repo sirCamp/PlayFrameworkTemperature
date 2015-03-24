@@ -9,7 +9,14 @@ import java.util.Vector;
 import models.Temperature;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.libs.Json;
+import response.Response;
+import response.ResponseError;
+import response.ResponseSuccess;
+import utils.DataFactory;
 import views.html.index;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class TemperatureController extends Controller {
 
@@ -18,64 +25,35 @@ public class TemperatureController extends Controller {
     }
 	
 	public static Result show(long data){
-		Calendar mydate = Calendar.getInstance();
-		mydate.setTimeInMillis(data);
-	
-		System.out.println(mydate.get(Calendar.DAY_OF_MONTH)+" "+mydate.get(Calendar.MONTH)+" "+mydate.get(Calendar.YEAR));
 		
-		int day = mydate.get(Calendar.DAY_OF_MONTH);
-		int month = mydate.get(Calendar.DAY_OF_MONTH);
-		int year = mydate.get(Calendar.YEAR);
-		
-		/*Vector<long> c = new Vector<long>();
-		int[] obj;
-		for(int i = 0; i < 24; i++){
-			Calendar mydate2 = Calendar.getInstance();
-				mydate2.set(year, month, day, i, 0);
-				c.push(new Integer(mydate2.getTimeInMillis()));
-				System.out.println(mydate2.getTimeInMillis());
-				Random rn = new Random();
-				System.out.println(rn.nextInt(40 - (-10) +1));
-						
-		}*/
-		
-		//Task.create(new Task("e"));
+		System.out.println(data);
+		String datas = DataFactory.createWithFormat(data,"Y-m-d");
+		System.out.println(datas);
+		JsonNode responseJson = null;
+		Response response = null;
 		
 		try{
-			System.out.println(Temperature.where("data","2015-03-23"));
-			Temperature.all();
+			response = new ResponseSuccess("OK",Temperature.where("data",datas));
+			
+			System.out.println("DEBUG: "+response);
 		}
 		catch(Exception e){
+		
+			response = new ResponseError("KO",null);
 			
-			System.out.println("Qualcosa è andato storto: "+e.getMessage());
+			System.out.println("Qualcosa è andato storto con il database: "+e.getMessage());
+		}
+		finally{
+			responseJson = Json.toJson(response); 
+			System.out.println(responseJson);
 		}
 		
-		
-		/*simulazione load dati*/
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if(response.esito){
+			return ok(responseJson);
 		}
-		return ok();
+
+		return badRequest(responseJson);
 	}
 
-
-	public static Result showMock(long data){
-		
-		Calendar mydate = Calendar.getInstance();
-		mydate.setTimeInMillis(data);
-		//System.out.println(mydate.getDay()+" "+mydate.getMonth() +" "+mydate.getYear());
-		
-		/*simulazione load dati*/
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return ok();
-	}
 
 }

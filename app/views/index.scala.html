@@ -100,11 +100,26 @@
 			var dataurl = button.siblings("a").attr("href");
 
 			function onDataReceived(series) {
-
+				
+				var dataReal = []
+				console.log("stampo tutti i sotto array");
+				$.each( series.data, function( key, value ){
+					console.log(value);
+					dataReal.push([value[0],value[1]]);
+				})
+				
+				series.data = dataReal;
+				
+				console.log(series);
+				
+				console.log("stampo la fine");
+				console.log(dataReal);
+				
 				// Extract the first coordinate pair; jQuery has parsed it, so
 				// the data is now just an ordinary JavaScript object
 
 				var firstcoordinate = "(" + series.data[0][0] + ", " + series.data[0][1] + ")";
+				console.log(firstcoordinate);
 				button.siblings("span").text("Fetched " + series.label + ", first point: " + firstcoordinate);
 
 				// Push the new data onto our existing data array
