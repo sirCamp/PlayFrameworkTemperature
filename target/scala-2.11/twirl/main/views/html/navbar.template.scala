@@ -28,19 +28,15 @@ object navbar extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
 
 Seq[Any](format.raw/*2.3*/("""<nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" class="brand-logo center"><i class="fa fa-fire" style="color:white"></i> TemperatureChecker</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><i class="fa fa-book left"style="color:white;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
+        <li><i class="fa fa-github left"style="color:white;"></i><a href="https://github.com/Dogfalo/materialize">MaterilizeCSS Repo</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><i class="fa fa-book left"style="color:white;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
+        <li><i class="fa fa-github left"style="color:white;"></i><a href="https://github.com/Dogfalo/materialize">MaterilizeCSS Repo</a></li>
       </ul>
     </div>
   </nav>
@@ -56,9 +52,9 @@ Seq[Any](format.raw/*2.3*/("""<nav>
 }
               /*
                   -- GENERATED --
-                  DATE: Sat Mar 21 12:12:34 CET 2015
+                  DATE: Tue Mar 24 18:01:32 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/navbar.scala.html
-                  HASH: 3758283b407b8f53690d6e8944d85ecacec5c590
+                  HASH: 7ffef669f8d05139101eac2c5a0c482aaeb7f6f0
                   MATRIX: 799->5
                   LINES: 29->2
                   -- GENERATED --

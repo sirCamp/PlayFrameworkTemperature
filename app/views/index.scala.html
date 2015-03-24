@@ -83,7 +83,7 @@
 			}).appendTo("body");
 		
 
-		var data = [];
+		/*var data = [];
 
 		$.plot("#placeholder", data, options);
 
@@ -101,18 +101,23 @@
 
 			function onDataReceived(series) {
 				
+				/*
+				*
+				* ESTRAZIONE DATI DAL JSON OBCJET
+				*
+				*
+				*
+				*/
+				/*console.log("DEBUG: RICEVUTO IL JSON E TRADOTTO A OBJECT -> ARRAY");
+				
 				var dataReal = []
-				console.log("stampo tutti i sotto array");
+				console.log("DEBUG: INIZIO ESTRAZIONE OBJECT");
 				$.each( series.data, function( key, value ){
 					console.log(value);
 					dataReal.push([value[0],value[1]]);
 				})
-				
+				console.log("DEBUG: FINE ESTRAZIONE OBJECT");
 				series.data = dataReal;
-				
-				console.log(series);
-				
-				console.log("stampo la fine");
 				console.log(dataReal);
 				
 				// Extract the first coordinate pair; jQuery has parsed it, so
@@ -193,7 +198,7 @@
 
 		// Add the Flot version string to the footer
 
-		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");*/
 	});</script>
 	<div class="row">
     	
@@ -201,7 +206,7 @@
 	    		
 	    		<div class="col s12">
 	    				<p>
-			<button class="fetchSeries">First dataset</button>
+		<!--	<button class="fetchSeries">First dataset</button>
 			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
 		</p>
@@ -216,25 +221,46 @@
 			<button class="fetchSeries">Third dataset</button>
 			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
 			<span></span>
-		</p>
-	    			<h3><span class="fa fa-file"></span>Misuration</h3>
+		</p>-->
+	    			<h4><span class="fa fa-file-o" style="margin-right:10px;"></span>Misuration</h4>
+	    			
 	    			<div id="placeholder"style="border:1px solid black; min-height:200px;">
-	    <div class="preloader-wrapper big active">
-      <div class="spinner-layer spinner-blue">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div></div>
-	    			</div>
+    			
+    					<div class="col s5 offset-s5" style="margin-top:10%">
+		    				<div class="preloader-wrapper big active valing">
+						      <div class="spinner-layer spinner-blue">
+						        <div class="circle-clipper left">
+						          <div class="circle"></div>
+						        </div><div class="gap-patch">
+						          <div class="circle"></div>
+						        </div><div class="circle-clipper right">
+						          <div class="circle"></div>
+						        </div>
+						      </div>
+						    </div>
+						    </div>
+						</div>
+	    			
+
 	    		</div>
 	    		<div class="col s12">
-	    			<h3><span class="fa fa-warning"></span>Failure</h3>
+	    			<h4><span class="fa fa-warning" style="margin-right: 5px;"></span>Failures</h4>
 	    			<div style="border:1px solid black; min-height:200px;">
-	    				@loader()
+	    				
+	    				<div class="col s5 offset-s5" style="margin-top:10%">
+		    				<div class="preloader-wrapper big active valing">
+						      <div class="spinner-layer spinner-blue">
+						        <div class="circle-clipper left">
+						          <div class="circle"></div>
+						        </div><div class="gap-patch">
+						          <div class="circle"></div>
+						        </div><div class="circle-clipper right">
+						          <div class="circle"></div>
+						        </div>
+						      </div>
+						    </div>
+						</div>
+						
 	    			</div>
 	    		</div>
     		

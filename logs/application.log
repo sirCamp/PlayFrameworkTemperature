@@ -1,22 +1,10 @@
-2015-03-24 08:36:05,970 - [INFO] - from play in pool-4-thread-2 
+2015-03-24 17:24:54,145 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-24 08:36:28,341 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 08:38:48,752 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 08:46:49,499 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 08:49:15,849 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 08:56:47,974 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:25:29,155 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6lhpad8kp - Internal server error, for (GET) [/] ->
+! @6li1p7mc7 - Internal server error, for (GET) [/] ->
 
 play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
@@ -44,83 +32,13 @@ play.PlayExceptions$CompilationException: Compilation error[error: cannot find s
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 08:58:22,293 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:25:29,622 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2015-03-24 17:25:31,722 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhpaii9i - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-03-24 08:59:59,035 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:01:12,546 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:01:35,856 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:08:01,277 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:08:13,917 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:08:46,889 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:09:32,509 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:10:39,387 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:11:11,785 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:12:52,937 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:13:40,681 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 09:14:26,675 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 10:12:00,366 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 10:13:50,673 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 10:19:38,165 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6lhpla356 - Internal server error, for (GET) [/] ->
+! @6li1p8088 - Internal server error, for (GET) [/] ->
 
 play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
@@ -148,10 +66,10 @@ play.PlayExceptions$CompilationException: Compilation error[error: cannot find s
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:20:09,396 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:26:07,507 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhplbnaa - Internal server error, for (GET) [/] ->
+! @6li1pa16f - Internal server error, for (GET) [/] ->
 
 play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
@@ -179,15 +97,12 @@ play.PlayExceptions$CompilationException: Compilation error[error: cannot find s
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:20:29,117 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 10:33:31,811 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:26:24,844 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhpn5ead - Internal server error, for (GET) [/] ->
+! @6li1pb0nc - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: incompatible types: List<Temperature> cannot be converted to List<Model>]
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
@@ -213,12 +128,12 @@ play.PlayExceptions$CompilationException: Compilation error[error: incompatible 
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:34:23,123 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:26:30,418 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhpn8c81 - Internal server error, for (GET) [/] ->
+! @6li1pb93m - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: incompatible types: List<Temperature> cannot be converted to List<Model>]
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
@@ -244,12 +159,12 @@ play.PlayExceptions$CompilationException: Compilation error[error: incompatible 
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:35:56,598 - [ERROR] - from application in New I/O worker #7 
+2015-03-24 17:26:46,459 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhpndkf5 - Internal server error, for (GET) [/] ->
+! @6li1pc6ml - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: incompatible types: List<Temperature> cannot be converted to List<Model>]
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
@@ -275,15 +190,12 @@ play.PlayExceptions$CompilationException: Compilation error[error: incompatible 
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:36:10,301 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-03-24 10:39:42,429 - [ERROR] - from application in New I/O worker #2 
+2015-03-24 17:27:07,668 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6lhpo0gh2 - Internal server error, for (GET) [/] ->
+! @6li1pdc6e - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: package utils does not exist]
+play.PlayExceptions$CompilationException: Compilation error[error: variable Failure might not have been initialized]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
@@ -309,63 +221,152 @@ play.PlayExceptions$CompilationException: Compilation error[error: package utils
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2015-03-24 10:40:09,509 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:27:54,826 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6li1pg407 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-03-24 17:28:05,825 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6li1pgk7b - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-03-24 17:28:26,226 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-24 10:41:51,445 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:29:15,240 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-24 10:42:54,674 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:29:53,040 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-24 10:45:09,453 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:30:21,850 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 10:46:30,509 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:30:35,989 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 10:48:14,888 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-24 17:31:02,113 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 10:49:13,757 - [INFO] - from play in play-internal-execution-context-8 
+2015-03-24 17:39:11,106 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:02:37,026 - [INFO] - from play in play-internal-execution-context-9 
+2015-03-24 17:44:13,075 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:14:41,705 - [INFO] - from play in play-internal-execution-context-9 
+2015-03-24 17:44:29,861 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:15:16,979 - [INFO] - from play in play-internal-execution-context-9 
+2015-03-24 17:44:55,097 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:16:25,512 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-24 17:45:13,120 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:17:07,693 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-24 17:46:21,485 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:17:39,340 - [INFO] - from play in play-internal-execution-context-11 
+2015-03-24 17:47:03,020 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:18:39,169 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:50:15,084 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:19:05,893 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:50:51,303 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:24:49,513 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:51:15,209 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:25:07,829 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:51:24,008 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:26:55,961 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:51:31,998 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2015-03-24 11:27:17,944 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:52:12,903 - [INFO] - from play in play-internal-execution-context-6 
 Application started (Dev)
 
-2015-03-24 11:27:34,264 - [INFO] - from play in play-internal-execution-context-15 
+2015-03-24 17:52:20,743 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:52:28,382 - [INFO] - from play in play-internal-execution-context-7 
+Application started (Dev)
+
+2015-03-24 17:53:21,207 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:53:42,346 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:53:52,914 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:58:45,773 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:59:15,413 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 17:59:38,489 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 18:01:17,311 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-03-24 18:01:32,703 - [INFO] - from play in play-internal-execution-context-6 
 Application started (Dev)
 

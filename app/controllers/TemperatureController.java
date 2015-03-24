@@ -55,5 +55,21 @@ public class TemperatureController extends Controller {
 		return badRequest(responseJson);
 	}
 
+	
+	public static Result delete(long id){
+		return badRequest();
+	}
+
+	public static Result create(){
+		return badRequest();
+	}
+
+	public static Result update(long id){
+		return badRequest();
+	}	
+
+	public static Result edit(long id){
+		return badRequest();
+	}
 
 }
