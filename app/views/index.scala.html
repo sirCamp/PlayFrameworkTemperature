@@ -200,75 +200,144 @@
 
 		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");*/
 	});</script>
-	<div class="row">
+
+	<style>
+
+	</style>
+	<div class="container">
+	<div class="row" style="margin-top:50px;">
     	
-    		<div class="col l6 m12 s12  ">
+    		<!--<div class="col l12 m12 s12  ">-->
 	    		
-	    		<div class="col s12">
-	    				<p>
-		<!--	<button class="fetchSeries">First dataset</button>
-			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
-			<span></span>
-		</p>
-
-		<p>
-			<button class="fetchSeries">Second dataset</button>
-			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
-			<span></span>
-		</p>
-
-		<p>
-			<button class="fetchSeries">Third dataset</button>
-			[ <a href="http://sviluppo1.shellrent.com/data.php">see data</a> ]
-			<span></span>
-		</p>-->
+	    		<div class="col l12 m12 s12">
+	    			<div class="col l6 m6 s12">
+		    			<button class="btn waves-effect waves-light datepicker" type="button" name="selectDay">
+		    				Change Data
+	    					<i class="mdi-action-schedule left"></i>
+	  					</button>
+	  				</div>
+	  				<div class="col l6 m6 s12">
+						<p class="flow-text description">Press the <em>Change Data</em> button for change the 	day and see the measuration of the day.
+						</p>
+	  				</div>
+	    		</div>
+	    		<div class="col l12 m12 s12">
 	    			<h4><span class="fa fa-file-o" style="margin-right:10px;"></span>Misuration</h4>
 	    			
-	    			<div id="placeholder"style="border:1px solid black; min-height:200px;">
-    			
-    					<div class="col s5 offset-s5" style="margin-top:10%">
-		    				<div class="preloader-wrapper big active valing">
-						      <div class="spinner-layer spinner-blue">
-						        <div class="circle-clipper left">
-						          <div class="circle"></div>
-						        </div><div class="gap-patch">
-						          <div class="circle"></div>
-						        </div><div class="circle-clipper right">
-						          <div class="circle"></div>
-						        </div>
-						      </div>
-						    </div>
-						    </div>
-						</div>
-	    			
+	    			<div id="placeholder1"style=" min-height:200px;">
+    				
+    					<div class="col s6 custom-preloader hide" id="temperature_loader">
 
-	    		</div>
-	    		<div class="col s12">
-	    			<h4><span class="fa fa-warning" style="margin-right: 5px;"></span>Failures</h4>
-	    			<div style="border:1px solid black; min-height:200px;">
-	    				
-	    				<div class="col s5 offset-s5" style="margin-top:10%">
-		    				<div class="preloader-wrapper big active valing">
-						      <div class="spinner-layer spinner-blue">
-						        <div class="circle-clipper left">
-						          <div class="circle"></div>
-						        </div><div class="gap-patch">
-						          <div class="circle"></div>
-						        </div><div class="circle-clipper right">
-						          <div class="circle"></div>
-						        </div>
-						      </div>
-						    </div>
+							<div class="preloader-wrapper big active">
+				              <div class="spinner-layer spinner-blue">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-red">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-yellow">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-green">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+            				</div>
 						</div>
+						<div id="temperature_graph" style="height: 200px;"></div>
+						</div>
+					</div>
+	    			
+					
+	    	</div>
+	    	<div class="col l12 m12 s12">
+	    			<h4><span class="fa fa-warning" style="margin-right: 5px;"></span>Failures</h4>
+	    			<div style=" min-height:200px;">	
+
+	    				<div class="col s6 custom-preloader hide" id="failure_loader" >
+	    					
+							<div class="preloader-wrapper big active">
+				              <div class="spinner-layer spinner-blue">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-red">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-yellow">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+
+				              <div class="spinner-layer spinner-green">
+				                <div class="circle-clipper left">
+				                  <div class="circle"></div>
+				                </div><div class="gap-patch">
+				                  <div class="circle"></div>
+				                </div><div class="circle-clipper right">
+				                  <div class="circle"></div>
+				                </div>
+				              </div>
+            				</div>
+						</div>
+						<div id="failure_graph" style="height: 200px;"></div>
 						
 	    			</div>
-	    		</div>
+	    	</div>
+	    <!--	</div>
     		
     		</div>
-    		<div class="col l6 m12 s12">
-    			<input type="date" class="datepicker">
-    		</div>	
-         
+    		<div class="col l6 m12 s12">-->
+    			<!--<input type="date" class="datepicker">-->
+    			<!--<button class="btn waves-effect waves-light" type="button" name="selectDay">Submit
+    				<i class="mdi-content-send right"></i>
+  				</button>
+    		</div>-->	
+         </div>
     </div>   
 
 }

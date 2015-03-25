@@ -26,20 +26,26 @@ object navbar extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
   def apply():play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*2.3*/("""<nav>
+Seq[Any](format.raw/*1.1*/("""<div class="navbar-fixed">
+  <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center"><i class="fa fa-fire" style="color:white"></i> TemperatureChecker</a>
+      <a href="#!" class="brand-logo center"><i class="fa fa-fire" style="color:white"></i><span class="reduce"> Temperature</span></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><i class="fa fa-book left"style="color:white;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
         <li><i class="fa fa-github left"style="color:white;"></i><a href="https://github.com/Dogfalo/materialize">MaterilizeCSS Repo</a></li>
       </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><i class="fa fa-book left"style="color:white;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
-        <li><i class="fa fa-github left"style="color:white;"></i><a href="https://github.com/Dogfalo/materialize">MaterilizeCSS Repo</a></li>
-      </ul>
+      <ul class="side-nav"></ul>
+
     </div>
   </nav>
+</div>
+  <div class="mobile-side-nav-custom">
+     <ul class="side-nav " id="mobile-demo">
+        <li><i class="fa fa-book left"style="color:#444;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
+        <li><i class="fa fa-github left"style="color:#444;"></i><a href="https://github.com/Dogfalo/materialize">MaterilizeCSS Repo</a></li>
+      </ul>
+  </div>
   """))}
   }
 
@@ -52,11 +58,11 @@ Seq[Any](format.raw/*2.3*/("""<nav>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 24 18:01:32 CET 2015
+                  DATE: Wed Mar 25 11:35:37 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/navbar.scala.html
-                  HASH: 7ffef669f8d05139101eac2c5a0c482aaeb7f6f0
-                  MATRIX: 799->5
-                  LINES: 29->2
+                  HASH: f210f9c846c2f4ec53b02455b0eeafa68e9dcb40
+                  MATRIX: 799->0
+                  LINES: 29->1
                   -- GENERATED --
               */
           

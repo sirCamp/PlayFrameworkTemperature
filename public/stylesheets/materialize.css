@@ -5175,6 +5175,10 @@ nav {
 
   .navbar-fixed {
     height: 64px; }
+
+  .navbar-fixed nav  {
+    position: relative !important;
+  }
  }
 
 @font-face {

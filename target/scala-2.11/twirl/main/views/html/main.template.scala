@@ -33,7 +33,7 @@ Seq[Any](format.raw/*1.32*/("""
 <html>
     <head>
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href=""""),_display_(/*8.53*/routes/*8.59*/.Assets.at("stylesheets/materialize.css")),format.raw/*8.100*/(""""  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href=""""),_display_(/*8.53*/routes/*8.59*/.Assets.at("stylesheets/materialize.min.css")),format.raw/*8.104*/(""""  media="screen,projection"/>
 	  <link type="text/css" rel="stylesheet" href=""""),_display_(/*9.50*/routes/*9.56*/.Assets.at("stylesheets/main.css")),format.raw/*9.90*/(""""/>	
 	  <link type="text/css" rel="stylesheet" href=""""),_display_(/*10.50*/routes/*10.56*/.Assets.at("stylesheets/font-awesome.min.css")),format.raw/*10.102*/(""""/>	
       <!--Let browser know website is optimized for mobile-->
@@ -43,7 +43,7 @@ Seq[Any](format.raw/*1.32*/("""
     <body>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src=""""),_display_(/*17.44*/routes/*17.50*/.Assets.at("javascripts/jquery-2.1.3.min.js")),format.raw/*17.95*/(""""></script>
-      <script type="text/javascript" src=""""),_display_(/*18.44*/routes/*18.50*/.Assets.at("javascripts/materialize.js")),format.raw/*18.90*/(""""></script>
+      <script type="text/javascript" src=""""),_display_(/*18.44*/routes/*18.50*/.Assets.at("javascripts/materialize.min.js")),format.raw/*18.94*/(""""></script>
       <script type="text/javascript" src=""""),_display_(/*19.44*/routes/*19.50*/.Assets.at("javascripts/main.js")),format.raw/*19.83*/(""""></script>
       
       <script type="text/javascript" src=""""),_display_(/*21.44*/routes/*21.50*/.Assets.at("javascripts/excanvas.min.js")),format.raw/*21.91*/(""""></script>
@@ -71,10 +71,10 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 22 22:31:25 CET 2015
+                  DATE: Wed Mar 25 17:30:07 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/main.scala.html
-                  HASH: bb5768904b715290b267a1d729f19d9d078fa2c4
-                  MATRIX: 727->1|845->31|874->34|1022->156|1036->162|1098->203|1204->283|1218->289|1272->323|1353->377|1368->383|1436->429|1761->727|1776->733|1842->778|1924->833|1939->839|2000->879|2082->934|2097->940|2151->973|2240->1035|2255->1041|2317->1082|2399->1137|2414->1143|2479->1187|2561->1242|2576->1248|2646->1297|2729->1353|2744->1359|2817->1410|2873->1440|2902->1448|2946->1466|2974->1473|3030->1502|3059->1510|3091->1515
+                  HASH: 70ce725a7d2fa666666cce8d4447a1f7d22a16fb
+                  MATRIX: 727->1|845->31|874->34|1022->156|1036->162|1102->207|1208->287|1222->293|1276->327|1357->381|1372->387|1440->433|1765->731|1780->737|1846->782|1928->837|1943->843|2008->887|2090->942|2105->948|2159->981|2248->1043|2263->1049|2325->1090|2407->1145|2422->1151|2487->1195|2569->1250|2584->1256|2654->1305|2737->1361|2752->1367|2825->1418|2881->1448|2910->1456|2954->1474|2982->1481|3038->1510|3067->1518|3099->1523
                   LINES: 26->1|29->1|32->4|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|45->17|45->17|45->17|46->18|46->18|46->18|47->19|47->19|47->19|49->21|49->21|49->21|50->22|50->22|50->22|51->23|51->23|51->23|52->24|52->24|52->24|54->26|54->26|56->28|56->28|59->31|59->31|60->32
                   -- GENERATED --
               */

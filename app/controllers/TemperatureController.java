@@ -48,6 +48,13 @@ public class TemperatureController extends Controller {
 			System.out.println(responseJson);
 		}
 		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		if(response.esito){
 			return ok(responseJson);
 		}
