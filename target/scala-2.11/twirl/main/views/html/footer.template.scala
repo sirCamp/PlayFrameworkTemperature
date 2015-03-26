@@ -30,24 +30,27 @@ Seq[Any](format.raw/*1.1*/("""<footer class="page-footer">
           
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text">Temperature Monitor Footer</h5>
+                <p class="grey-text text-lighten-4">You can see the used technologies by clicking on near links.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text">Used Technologies Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.flotcharts.org/"><span class="fa fa-area-chart fa-material-footer"></span>FlotChart JS</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://jquery.com/"><span class="fa fa-jsfiddle fa-material-footer"></span>jQuery 2.1.3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.playframework.com/"><span class="fa fa-play fa-material-footer"></span>Play Framework</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://materializecss.com/"><span class="fa fa-css3 fa-material-footer"></span>Materialize CSS</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://coffeescript.org/"><span class="fa fa-coffee fa-material-footer"></span>CoffeScript</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+           
+            <a class="grey-text text-lighten-4 right" href="http://stefanocampese.xyz/">
+            <span class="fa fa-globe fa-material-footer"></span>
+            My WebSites</a>
             </div>
          
         </footer>"""))}
@@ -62,9 +65,9 @@ Seq[Any](format.raw/*1.1*/("""<footer class="page-footer">
 }
               /*
                   -- GENERATED --
-                  DATE: Sat Mar 21 15:32:57 CET 2015
+                  DATE: Thu Mar 26 14:42:07 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/footer.scala.html
-                  HASH: f7b6b398a2ad0317257eb87be8abe515df0651a6
+                  HASH: bca889506cf02c89b61fc92adf48244a83f0e3f1
                   MATRIX: 799->0
                   LINES: 29->1
                   -- GENERATED --

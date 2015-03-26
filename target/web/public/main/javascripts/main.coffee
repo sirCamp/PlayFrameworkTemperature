@@ -103,7 +103,7 @@ $(document).ready ->
 	  $.each series.data, (key, value) ->
 	    
 	    dataReal.push [
-	      value.timestamp
+	      value.timestamp*1000
 	      value.temperature
 	    ]
 	    return
@@ -164,6 +164,7 @@ $(document).ready ->
 	        1
 	        'hour'
 	      ]
+	      timezone: 'browser'
 	    zoom: interactive: true
 	    pan: interactive: true
 	  # Estraggo la prima coordinata per printarla
@@ -198,7 +199,7 @@ $(document).ready ->
 	    return
 	  return
 
-	  onFailureSuccess = (series) ->
+	onFailureSuccess = (series) ->
 	    console.debug '[DEBUG]: STAMPO L\'OGGETTO '
 	    console.log series.data
 	    ###
@@ -217,14 +218,14 @@ $(document).ready ->
 	    $.each series.data, (key, value) ->
 	      
 	      dataReal.push [
-	        value.timestamp
-	        value.temperature
+	        value.timestamp*1000
+	        1
 	      ]
 	      return
 	    console.debug '[DEBUG]: FINE ESTRAZIONE OBJECT'
 	    series.data = dataReal
-	    series.label = 'Daily temperature'
-	    series.color = '#4db6ac';
+	    series.label = 'Daily failure'
+	    series.color = '#ee6e73';
 	    window.dataReal = dataReal;
 	    console.log series.data[0];
 	    
@@ -232,7 +233,7 @@ $(document).ready ->
 	    options = 
 	      series:
 	        lines:
-	          show: true
+	          show: false
 	          fill: true
 	          lineWidth: 1
 	          fillColor: colors: [
@@ -264,7 +265,7 @@ $(document).ready ->
 	        axisLabelFontSizePixels: 12
 	        axisLabelFontFamily: 'Verdana, Arial'
 	        axisLabelPadding: 5
-	        tickSize: 5
+	        tickSize: 1
 	      xaxis:
 	        color: '#eee'
 	        axisLabel: 'Ore '
@@ -278,34 +279,36 @@ $(document).ready ->
 	          1
 	          'hour'
 	        ]
+	        timezone: 'browser'
 	      zoom: interactive: true
 	      pan: interactive: true
 	    # Estraggo la prima coordinata per printarla
 	  
 	    firstcoordinate = '(' + series.data[0][0] + ', ' + series.data[0][1] + ')'
-	    console.log firstcoordinate
+	    
 	    #button.siblings('span').text 'Fetched ' + series.label + ', first point: ' + firstcoordinate
 	    # Push the new data onto our existing data array
 	    if !alreadyFetched[series.label]
 	      alreadyFetched[series.label] = true
 	      data.push series
 
-	    plot = $.plot '#temperature_graph', data, options
-	    $('#temperature_graph').bind 'plothover', (event, pos, item) ->
+	    plot = $.plot '#failure_graph', data, options
+	    $('#failure_graph').bind 'plothover', (event, pos, item) ->
 	      str = '(' + pos.x.toFixed(2) + ', ' + pos.y.toFixed(2) + ')'
 	      $('#hoverdata').text str
 	      if item
-	        x = new Date(item.datapoint[0]).toTimeString();
+	        x = new Date((item.datapoint[0])).toTimeString();
+	        console.log item.datapoint[0];
 	        y = item.datapoint[1];
 	        
-	        $('#tooltip').html('Temprature at ' + x + ' is ' + y.toString() + '&deg;C').css(
+	        $('#tooltip').html('Failure  on ' + x.toString() ).css(
 	          top: item.pageY + 5
 	          left: item.pageX + 5
-	          'background-color': '#AAE2DD').fadeIn 200
+	          'background-color': '#ee6e73').fadeIn 200
 	      else
 	        $('#tooltip').hide()
 	      return
-	    $('#temperature_graph').bind 'plotclick', (event, pos, item) ->
+	    $('#failure_graph').bind 'plotclick', (event, pos, item) ->
 	      if item
 	        $('#clickdata').text ' - click point ' + item.dataIndex + ' in ' + item.series.label
 	        plot.highlight item.series, item.datapoint

@@ -29,7 +29,7 @@ object navbar extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
 Seq[Any](format.raw/*1.1*/("""<div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center"><i class="fa fa-fire" style="color:white"></i><span class="reduce"> Temperature</span></a>
+      <a href="#!" class="brand-logo center"><i class="fa fa-fire" style="color:white"></i><span class="reduce">TemperatureMonitor</span></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><i class="fa fa-book left"style="color:white;"></i><a href="http://materializecss.com/">MaterilizeCSS Docs</a></li>
@@ -58,9 +58,9 @@ Seq[Any](format.raw/*1.1*/("""<div class="navbar-fixed">
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 25 11:35:37 CET 2015
+                  DATE: Thu Mar 26 14:21:00 CET 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/navbar.scala.html
-                  HASH: f210f9c846c2f4ec53b02455b0eeafa68e9dcb40
+                  HASH: 1be0d10a9a0a4f571970c8a476a433aed5c3102f
                   MATRIX: 799->0
                   LINES: 29->1
                   -- GENERATED --

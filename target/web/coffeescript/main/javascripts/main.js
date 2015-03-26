@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    var $input, ajaxRequest, init, onEmptySuccess, onTemperatureError, onTemperatureSuccess;
+    var $input, ajaxRequest, init, onEmptySuccess, onFailureSuccess, onTemperatureError, onTemperatureSuccess;
     ajaxRequest = function(data) {
       $('#failure_loader').removeClass('hide').addClass('show');
       $('#temperature_loader').removeClass('hide').addClass('show');
@@ -68,8 +68,8 @@
     onTemperatureError = function() {
       return console.log('MERDA');
     };
-    return onTemperatureSuccess = function(series) {
-      var alreadyFetched, data, dataReal, firstcoordinate, onFailureSuccess, options, plot;
+    onTemperatureSuccess = function(series) {
+      var alreadyFetched, data, dataReal, firstcoordinate, options, plot;
       console.debug('[DEBUG]: STAMPO L\'OGGETTO ');
       console.log(series.data);
 
@@ -86,7 +86,7 @@
       dataReal = [];
       console.debug('[DEBUG]: INIZIO ESTRAZIONE OBJECT');
       $.each(series.data, function(key, value) {
-        dataReal.push([value.timestamp, value.temperature]);
+        dataReal.push([value.timestamp * 1000, value.temperature]);
       });
       console.debug('[DEBUG]: FINE ESTRAZIONE OBJECT');
       series.data = dataReal;
@@ -156,7 +156,8 @@
           axisLabelPadding: 10,
           mode: 'time',
           timeformat: '%H',
-          tickSize: [1, 'hour']
+          tickSize: [1, 'hour'],
+          timezone: 'browser'
         },
         zoom: {
           interactive: true
@@ -194,133 +195,134 @@
           plot.highlight(item.series, item.datapoint);
         }
       });
-      return;
-      return onFailureSuccess = function(series) {
-        console.debug('[DEBUG]: STAMPO L\'OGGETTO ');
-        console.log(series.data);
+    };
+    return onFailureSuccess = function(series) {
+      var alreadyFetched, data, dataReal, firstcoordinate, options, plot;
+      console.debug('[DEBUG]: STAMPO L\'OGGETTO ');
+      console.log(series.data);
 
-        /*
-        	    *
-        	    * ESTRAZIONE DATI DAL JSON OBCJET
-        	    *
-        	    *
-        	    *
-         */
-        alreadyFetched = {};
-        data = [];
-        console.debug('[DEBUG]: RICEVUTO IL JSON E TRADOTTO A OBJECT -> ARRAY');
-        dataReal = [];
-        console.debug('[DEBUG]: INIZIO ESTRAZIONE OBJECT');
-        $.each(series.data, function(key, value) {
-          dataReal.push([value.timestamp, value.temperature]);
-        });
-        console.debug('[DEBUG]: FINE ESTRAZIONE OBJECT');
-        series.data = dataReal;
-        series.label = 'Daily temperature';
-        series.color = '#4db6ac';
-        window.dataReal = dataReal;
-        console.log(series.data[0]);
-        console.debug('[DEBUG]: INIZIALIZZO L\'OGGETTO GRAFICO');
-        options = {
-          series: {
-            lines: {
-              show: true,
-              fill: true,
-              lineWidth: 1,
-              fillColor: {
-                colors: [
-                  {
-                    color: '#FFA500',
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }, {
-                    opacity: 0.5
-                  }
-                ]
-              }
-            },
-            points: {
-              show: true
-            },
-            shadowSize: 1
+      /*
+      	    *
+      	    * ESTRAZIONE DATI DAL JSON OBCJET
+      	    *
+      	    *
+      	    *
+       */
+      alreadyFetched = {};
+      data = [];
+      console.debug('[DEBUG]: RICEVUTO IL JSON E TRADOTTO A OBJECT -> ARRAY');
+      dataReal = [];
+      console.debug('[DEBUG]: INIZIO ESTRAZIONE OBJECT');
+      $.each(series.data, function(key, value) {
+        dataReal.push([value.timestamp * 1000, 1]);
+      });
+      console.debug('[DEBUG]: FINE ESTRAZIONE OBJECT');
+      series.data = dataReal;
+      series.label = 'Daily failure';
+      series.color = '#ee6e73';
+      window.dataReal = dataReal;
+      console.log(series.data[0]);
+      console.debug('[DEBUG]: INIZIALIZZO L\'OGGETTO GRAFICO');
+      options = {
+        series: {
+          lines: {
+            show: false,
+            fill: true,
+            lineWidth: 1,
+            fillColor: {
+              colors: [
+                {
+                  color: '#FFA500',
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }, {
+                  opacity: 0.5
+                }
+              ]
+            }
           },
-          legend: {
-            position: 'sw'
+          points: {
+            show: true
           },
-          grid: {
-            hoverable: true,
-            clickable: true,
-            borderColor: '#ddd',
-            borderWidth: 1,
-            labelMargin: 10,
-            backgroundColor: '#fff'
-          },
-          yaxis: {
-            color: '#eee',
-            axisLabel: 'Temperature',
-            axisLabelUseCanvas: true,
-            axisLabelFontSizePixels: 12,
-            axisLabelFontFamily: 'Verdana, Arial',
-            axisLabelPadding: 5,
-            tickSize: 5
-          },
-          xaxis: {
-            color: '#eee',
-            axisLabel: 'Ore ',
-            axisLabelUseCanvas: true,
-            axisLabelFontSizePixels: 12,
-            axisLabelFontFamily: 'Verdana, Arial',
-            axisLabelPadding: 10,
-            mode: 'time',
-            timeformat: '%H',
-            tickSize: [1, 'hour']
-          },
-          zoom: {
-            interactive: true
-          },
-          pan: {
-            interactive: true
-          }
-        };
-        firstcoordinate = '(' + series.data[0][0] + ', ' + series.data[0][1] + ')';
-        console.log(firstcoordinate);
-        if (!alreadyFetched[series.label]) {
-          alreadyFetched[series.label] = true;
-          data.push(series);
+          shadowSize: 1
+        },
+        legend: {
+          position: 'sw'
+        },
+        grid: {
+          hoverable: true,
+          clickable: true,
+          borderColor: '#ddd',
+          borderWidth: 1,
+          labelMargin: 10,
+          backgroundColor: '#fff'
+        },
+        yaxis: {
+          color: '#eee',
+          axisLabel: 'Temperature',
+          axisLabelUseCanvas: true,
+          axisLabelFontSizePixels: 12,
+          axisLabelFontFamily: 'Verdana, Arial',
+          axisLabelPadding: 5,
+          tickSize: 1
+        },
+        xaxis: {
+          color: '#eee',
+          axisLabel: 'Ore ',
+          axisLabelUseCanvas: true,
+          axisLabelFontSizePixels: 12,
+          axisLabelFontFamily: 'Verdana, Arial',
+          axisLabelPadding: 10,
+          mode: 'time',
+          timeformat: '%H',
+          tickSize: [1, 'hour'],
+          timezone: 'browser'
+        },
+        zoom: {
+          interactive: true
+        },
+        pan: {
+          interactive: true
         }
-        plot = $.plot('#temperature_graph', data, options);
-        $('#temperature_graph').bind('plothover', function(event, pos, item) {
-          var str, x, y;
-          str = '(' + pos.x.toFixed(2) + ', ' + pos.y.toFixed(2) + ')';
-          $('#hoverdata').text(str);
-          if (item) {
-            x = new Date(item.datapoint[0]).toTimeString();
-            y = item.datapoint[1];
-            $('#tooltip').html('Temprature at ' + x + ' is ' + y.toString() + '&deg;C').css({
-              top: item.pageY + 5,
-              left: item.pageX + 5,
-              'background-color': '#AAE2DD'
-            }).fadeIn(200);
-          } else {
-            $('#tooltip').hide();
-          }
-        });
-        $('#temperature_graph').bind('plotclick', function(event, pos, item) {
-          if (item) {
-            $('#clickdata').text(' - click point ' + item.dataIndex + ' in ' + item.series.label);
-            plot.highlight(item.series, item.datapoint);
-          }
-        });
       };
+      firstcoordinate = '(' + series.data[0][0] + ', ' + series.data[0][1] + ')';
+      if (!alreadyFetched[series.label]) {
+        alreadyFetched[series.label] = true;
+        data.push(series);
+      }
+      plot = $.plot('#failure_graph', data, options);
+      $('#failure_graph').bind('plothover', function(event, pos, item) {
+        var str, x, y;
+        str = '(' + pos.x.toFixed(2) + ', ' + pos.y.toFixed(2) + ')';
+        $('#hoverdata').text(str);
+        if (item) {
+          x = new Date(item.datapoint[0]).toTimeString();
+          console.log(item.datapoint[0]);
+          y = item.datapoint[1];
+          $('#tooltip').html('Failure  on ' + x.toString()).css({
+            top: item.pageY + 5,
+            left: item.pageX + 5,
+            'background-color': '#ee6e73'
+          }).fadeIn(200);
+        } else {
+          $('#tooltip').hide();
+        }
+      });
+      $('#failure_graph').bind('plotclick', function(event, pos, item) {
+        if (item) {
+          $('#clickdata').text(' - click point ' + item.dataIndex + ' in ' + item.series.label);
+          plot.highlight(item.series, item.datapoint);
+        }
+      });
     };
   });
 
