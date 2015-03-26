@@ -1,7 +1,8 @@
 PlayFrameworkTemperature
 ==========================
 
-This is a project purely demonstrative.
+This is a project purely demonstrative, it is a web app.
+This app show the temperature measurements, made by a sensor, on a certain day that you choose.
 It was implemented using **PlayFramework (Java)**, **MaterializeCSS**, **JQuery**, **FlotChart JS**.
 
 The database is based on **MongoDB**, but shortly I will develop the variant with **OrientDB**.
