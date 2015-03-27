@@ -18,9 +18,9 @@ $(document).ready ->
 	    	onTemperatureSuccess data
 	    $('#temperature_loader').removeClass('show').addClass('hide');
 	    
-	  ).fail((data) ->
-	    console.error '[DEBUG]: RICHIESTA TEMPERATURA FALLITA'
-	    onTemperatureError()
+	  ).fail((jqXHR, textStatus) ->
+	    console.error '[DEBUG]: RICHIESTA TEMPERATURA FALLITA'	    
+	    onError('temperature_graph',jQuery.parseJSON(jqXHR.responseText))
 	    $('#temperature_loader').removeClass('show').addClass('hide');
 	  )
 	  
@@ -32,8 +32,10 @@ $(document).ready ->
 	    else
 	    	onFailureSuccess data
 	    $('#failure_loader').removeClass('show').addClass('hide');
-	  ).fail((data) ->
+	  ).fail((jqXHR, textStatus) ->
 	    console.error '[DEBUG]: RICHIESTA FAILURE FALLITA'
+	    onError('failure_graph',jQuery.parseJSON(jqXHR.responseText))
+	    $('#failure_loader').removeClass('show').addClass('hide');
 	  )
 	  return
 				   
@@ -72,17 +74,24 @@ $(document).ready ->
 		
 		switch element
 		  when 'temperature_graph'
-		  	$('#'+element).html('<blockquote style="font-size: 2em;"><span class="fa fa-warning" style="margin-right:5px; color:#EF9A9A"></span>'+message+'</blockquote>');
+		  	$('#'+element).html('<blockquote ><span class="fa fa-warning" style="margin-right:5px; color:#EF9A9A"></span>'+message+'</blockquote>');
 		  	$('#temperature_loader').removeClass('show').addClass('hide');
 
 		  when 'failure_graph'
-		  	$('#'+element).html('<blockquote style="font-size: 2em; border-color:#a5d6a7"><span class="fa fa-check" style="margin-right:5px; color:#a5d6a7"></span>'+message+'</blockquote>');
+		  	$('#'+element).html('<blockquote style=" border-color:#a5d6a7"><span class="fa fa-check" style="margin-right:5px; color:#a5d6a7"></span>'+message+'</blockquote>');
 		  	$('#failure_loader').removeClass('show').addClass('hide');
 
 		console.log message
 
-	onTemperatureError = () ->
-		console.log 'MERDA'
+	onError = (element,data) ->
+		switch element
+		  when 'temperature_graph'
+		  	$('#'+element).html('<blockquote style="border-color:#a94442;"><span class="fa fa-exclamation-circle" style="margin-right:5px; color:#a94442"></span>'+data.message+'</blockquote>');
+		  	$('#temperature_loader').removeClass('show').addClass('hide');
+
+		  when 'failure_graph'
+		  	$('#'+element).html('<blockquote style="border-color:#a94442;"><span class="fa fa-exclamation-circle" style="margin-right:5px; color:#a94442"></span>'+data.message+'</blockquote>');
+		  	$('#failure_loader').removeClass('show').addClass('hide');
 
 	onTemperatureSuccess = (series) ->
 	  console.debug '[DEBUG]: STAMPO L\'OGGETTO '

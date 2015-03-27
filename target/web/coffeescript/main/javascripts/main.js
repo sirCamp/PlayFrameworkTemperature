@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    var $input, ajaxRequest, init, onEmptySuccess, onFailureSuccess, onTemperatureError, onTemperatureSuccess;
+    var $input, ajaxRequest, init, onEmptySuccess, onError, onFailureSuccess, onTemperatureSuccess;
     ajaxRequest = function(data) {
       $('#failure_loader').removeClass('hide').addClass('show');
       $('#temperature_loader').removeClass('hide').addClass('show');
@@ -15,9 +15,9 @@
           onTemperatureSuccess(data);
         }
         return $('#temperature_loader').removeClass('show').addClass('hide');
-      }).fail(function(data) {
+      }).fail(function(jqXHR, textStatus) {
         console.error('[DEBUG]: RICHIESTA TEMPERATURA FALLITA');
-        onTemperatureError();
+        onError('temperature_graph', jQuery.parseJSON(jqXHR.responseText));
         return $('#temperature_loader').removeClass('show').addClass('hide');
       });
       $.get('/failure/show/' + data.select).done(function(data) {
@@ -29,8 +29,10 @@
           onFailureSuccess(data);
         }
         return $('#failure_loader').removeClass('show').addClass('hide');
-      }).fail(function(data) {
-        return console.error('[DEBUG]: RICHIESTA FAILURE FALLITA');
+      }).fail(function(jqXHR, textStatus) {
+        console.error('[DEBUG]: RICHIESTA FAILURE FALLITA');
+        onError('failure_graph', jQuery.parseJSON(jqXHR.responseText));
+        return $('#failure_loader').removeClass('show').addClass('hide');
       });
     };
     $(".button-collapse").sideNav();
@@ -56,17 +58,24 @@
     onEmptySuccess = function(element, message) {
       switch (element) {
         case 'temperature_graph':
-          $('#' + element).html('<blockquote style="font-size: 2em;"><span class="fa fa-warning" style="margin-right:5px; color:#EF9A9A"></span>' + message + '</blockquote>');
+          $('#' + element).html('<blockquote ><span class="fa fa-warning" style="margin-right:5px; color:#EF9A9A"></span>' + message + '</blockquote>');
           $('#temperature_loader').removeClass('show').addClass('hide');
           break;
         case 'failure_graph':
-          $('#' + element).html('<blockquote style="font-size: 2em; border-color:#a5d6a7"><span class="fa fa-check" style="margin-right:5px; color:#a5d6a7"></span>' + message + '</blockquote>');
+          $('#' + element).html('<blockquote style=" border-color:#a5d6a7"><span class="fa fa-check" style="margin-right:5px; color:#a5d6a7"></span>' + message + '</blockquote>');
           $('#failure_loader').removeClass('show').addClass('hide');
       }
       return console.log(message);
     };
-    onTemperatureError = function() {
-      return console.log('MERDA');
+    onError = function(element, data) {
+      switch (element) {
+        case 'temperature_graph':
+          $('#' + element).html('<blockquote style="border-color:#a94442;"><span class="fa fa-exclamation-circle" style="margin-right:5px; color:#a94442"></span>' + data.message + '</blockquote>');
+          return $('#temperature_loader').removeClass('show').addClass('hide');
+        case 'failure_graph':
+          $('#' + element).html('<blockquote style="border-color:#a94442;"><span class="fa fa-exclamation-circle" style="margin-right:5px; color:#a94442"></span>' + data.message + '</blockquote>');
+          return $('#failure_loader').removeClass('show').addClass('hide');
+      }
     };
     onTemperatureSuccess = function(series) {
       var alreadyFetched, data, dataReal, firstcoordinate, options, plot;

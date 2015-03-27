@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.HashMap;
+
+import play.mvc.BodyParser;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
@@ -9,10 +12,10 @@ import response.Response;
 import response.ResponseError;
 import response.ResponseSuccess;
 import utils.DataFactory;
+import utils.ModelFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.libs.Json;
-
 import models.Failure;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -38,7 +41,7 @@ public class FailureController extends Controller{
 		}
 		catch(Exception e){
 		
-			response = new ResponseError("KO",null);
+			response = new ResponseError("Something wrong happened, come back later",null);
 			
 			System.out.println("Qualcosa è andato storto con il database: "+e.getMessage());
 		}
@@ -51,15 +54,32 @@ public class FailureController extends Controller{
 			return ok(responseJson);
 		}
 
-		return badRequest(responseJson);
+		return internalServerError(responseJson);
 	}
 
 	public static Result delete(long id){
 		return badRequest();
 	}
 
+	@BodyParser.Of(BodyParser.Json.class)
 	public static Result create(){
-		return badRequest();
+		JsonNode json = request().body().asJson();
+		
+		
+		JsonNode responseJson = null;
+				
+		try{
+			ModelFactory.createModel(Failure.class,json);
+			responseJson = Json.toJson(new HashMap<String,String>().put("Message", "JSON parsed succesfully"));
+		}
+		catch(Exception e){
+			responseJson = Json.toJson(new HashMap<String,String>().put("Message",e.getMessage()));
+		}
+				
+		return ok(responseJson);
+			
+
+		
 	}
 
 	public static Result update(long id){

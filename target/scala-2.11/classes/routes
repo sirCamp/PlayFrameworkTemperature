@@ -7,9 +7,12 @@ GET     /                           			controllers.Application.index()
 
 GET     /temperature                           	controllers.TemperatureController.index()
 GET		/temperature/show/:data					controllers.TemperatureController.show(data: Long)
+POST	/temperature/create						controllers.TemperatureController.create()
+
 
 GET     /failure                           		controllers.FailureController.index()
 GET		/failure/show/:data						controllers.FailureController.show(data: Long)
+POST	/failure/create							controllers.FailureController.create()
 
 
 # Map static resources from the /public folder to the /assets URL path

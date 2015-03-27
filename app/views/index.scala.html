@@ -1,223 +1,20 @@
 @(message: String)
 
 @main("Home") {
-	<script type="text/javascript">
 
-	$(function() {
-
-		var options = {
-
-						series: {
-							lines: {
-					            show: true,
-					            fill: true,
-					            lineWidth: 1,
-					            fillColor: {
-						            colors: [ 
-						            	{ color: "#FFA500",opacity: 0.5 },
-						            	{ opacity: 0.5 },
-						            	{ opacity: 0.5 },
-						            	{ opacity: 0.5 },
-						            	{ opacity: 0.5 },
-						            	{ opacity: 0.5 },
-						                { opacity: 0.5 }
-						            ]
-					            }
-				          	},
-						points: {
-			            	show: true
-			          	},
-			          	shadowSize: 1
-					},
-					  
-					legend: {
-			        	position: 'nw'
-			        },
-					grid: {
-			          hoverable: true,
-			          clickable: true,
-			          borderColor: '#ddd',
-			          borderWidth: 1,
-			          labelMargin: 10,
-			          backgroundColor: '#fff'
-			        },
-			
-			yaxis: {
-					  
-			    /*min: -70,
-			    max: 70,*/
-			    color: '#eee',
-				axisLabel: "Temperature",
-				axisLabelUseCanvas: true,
-				axisLabelFontSizePixels: 12,
-				axisLabelFontFamily: 'Verdana, Arial',
-				axisLabelPadding: 5,
-				tickSize: 5     	
-
-			},			
-			xaxis: {
-				color: '#eee',
-			    axisLabel: "Ore ",
-			    axisLabelUseCanvas: true,
-			    axisLabelFontSizePixels: 12,
-			    axisLabelFontFamily: 'Verdana, Arial',
-			    axisLabelPadding: 10,
-			    mode: "time",
-			    timeformat: "%H",
-				tickSize: [1, "hour"]
-			},
-			        zoom: {
-						interactive: true
-					},
-					pan: {
-						interactive: true
-					}
-			};
-			$("<div id='tooltip'></div>").css({
-				position: "absolute",
-				display: "none",
-				border: "1px solid #fdd",
-				padding: "2px",
-				"background-color": "#fee",
-				opacity: 0.9
-			}).appendTo("body");
-		
-
-		/*var data = [];
-
-		$.plot("#placeholder", data, options);
-
-		// Fetch one series, adding to what we already have
-
-		var alreadyFetched = {};
-
-		$("button.fetchSeries").click(function () {
-
-			var button = $(this);
-
-			// Find the URL in the link right next to us, then fetch the data
-
-			var dataurl = button.siblings("a").attr("href");
-
-			function onDataReceived(series) {
-				
-				/*
-				*
-				* ESTRAZIONE DATI DAL JSON OBCJET
-				*
-				*
-				*
-				*/
-				/*console.log("DEBUG: RICEVUTO IL JSON E TRADOTTO A OBJECT -> ARRAY");
-				
-				var dataReal = []
-				console.log("DEBUG: INIZIO ESTRAZIONE OBJECT");
-				$.each( series.data, function( key, value ){
-					console.log(value);
-					dataReal.push([value[0],value[1]]);
-				})
-				console.log("DEBUG: FINE ESTRAZIONE OBJECT");
-				series.data = dataReal;
-				console.log(dataReal);
-				
-				// Extract the first coordinate pair; jQuery has parsed it, so
-				// the data is now just an ordinary JavaScript object
-
-				var firstcoordinate = "(" + series.data[0][0] + ", " + series.data[0][1] + ")";
-				console.log(firstcoordinate);
-				button.siblings("span").text("Fetched " + series.label + ", first point: " + firstcoordinate);
-
-				// Push the new data onto our existing data array
-
-				if (!alreadyFetched[series.label]) {
-					alreadyFetched[series.label] = true;
-					data.push(series);
-				}
-
-				$.plot("#placeholder", data, options);
-			}
-
-			$.ajax({
-				url: dataurl,
-				type: "GET",
-				dataType: "json",
-				success: onDataReceived
-			});
-		});
-
-		// Initiate a recurring data update
-
-		$("button.dataUpdate").click(function () {
-
-			data = [];
-			alreadyFetched = {};
-
-			//$.plot("#placeholder", data, options);
-
-			var iteration = 0;
-
-			function fetchData() {
-
-				++iteration;
-
-				function onDataReceived(series) {
-
-					// Load all the data in one pass; if we only got partial
-					// data we could merge it with what we already have.
-
-					data = [ series ];
-
-					$.plot("#placeholder", data, options);
-				}
-
-				// Normally we call the same URL - a script connected to a
-				// database - but in this case we only have static example
-				// files, so we need to modify the URL.
-
-				$.ajax({
-					url: "data-eu-gdp-growth-" + iteration + ".json",
-					type: "GET",
-					dataType: "json",
-					success: onDataReceived
-				});
-
-				if (iteration < 5) {
-					setTimeout(fetchData, 1000);
-				} else {
-					data = [];
-					alreadyFetched = {};
-				}
-			}
-
-			setTimeout(fetchData, 1000);
-		});
-
-		// Load the first series by default, so we don't have an empty plot
-
-		$("button.fetchSeries:first").click();
-
-		// Add the Flot version string to the footer
-
-		$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");*/
-	});</script>
-
-	<style>
-
-	</style>
 	<div class="container">
 	<div class="row" style="margin-top:50px;">
-    	
-    		<!--<div class="col l12 m12 s12  ">-->
-	    		
+    	    		
 	    		<div class="col l12 m12 s12">
 	    			<div class="col l6 m6 s12">
 		    			<button class="btn waves-effect waves-light datepicker" type="button" name="selectDay">
-		    				Change Data
+		    				Change Day
 	    					<i class="mdi-action-schedule left"></i>
 	  					</button>
 	  				</div>
 	  				<div class="col l6 m6 s12">
-						<p class="flow-text description">Press the <em>Change Data</em> button for change the 	day and see the measuration of the day.
+
+						<p class="flow-text description">Press <em style="color:#26a69a"> Change Day </em>  button to change the date and see the temperature readings of the selected day.
 						</p>
 	  				</div>
 	    		</div>
@@ -328,15 +125,7 @@
 						
 	    			</div>
 	    	</div>
-	    <!--	</div>
-    		
-    		</div>
-    		<div class="col l6 m12 s12">-->
-    			<!--<input type="date" class="datepicker">-->
-    			<!--<button class="btn waves-effect waves-light" type="button" name="selectDay">Submit
-    				<i class="mdi-content-send right"></i>
-  				</button>
-    		</div>-->	
+
          </div>
     </div>   
 
