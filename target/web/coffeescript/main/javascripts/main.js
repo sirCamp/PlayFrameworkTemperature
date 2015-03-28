@@ -50,7 +50,7 @@
       var dateObject;
       console.debug('[DEBUG]: INIZIALIZZO CON DATA DI TEST LA PRIMA CHIAMATA (2015-04-01)');
       dateObject = {
-        'select': new Date("2015-4-1").getTime()
+        'select': new Date().getTime()
       };
       return ajaxRequest(dateObject);
     };
@@ -134,10 +134,10 @@
           points: {
             show: true
           },
-          shadowSize: 1
-        },
-        legend: {
-          position: 'sw'
+          shadowSize: 1,
+          legend: {
+            position: 'nw'
+          }
         },
         grid: {
           hoverable: true,

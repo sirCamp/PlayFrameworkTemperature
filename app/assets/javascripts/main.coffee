@@ -65,8 +65,8 @@ $(document).ready ->
 		
 		console.debug '[DEBUG]: INIZIALIZZO CON DATA DI TEST LA PRIMA CHIAMATA (2015-04-01)'
 		#OGGETTO DI TEST
-		dateObject = {'select':new Date("2015-4-1").getTime()};
-		#dateObject = {'select': new Date().getTime()};
+		#dateObject = {'select':new Date("2015-04-01").getTime()};
+		dateObject = {'select': new Date().getTime()};
 		ajaxRequest(dateObject);
 	init();
 
@@ -144,7 +144,7 @@ $(document).ready ->
 	        ]
 	      points: show: true
 	      shadowSize: 1
-	    legend: position: 'sw'
+	      legend: position: 'nw'
 	    grid:
 	      hoverable: true
 	      clickable: true
