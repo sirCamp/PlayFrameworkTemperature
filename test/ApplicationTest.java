@@ -36,9 +36,36 @@ public class ApplicationTest {
 
     @Test
     public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
+        Content html = views.html.index.render("TemperatureMonitor");
         assertThat(contentType(html)).isEqualTo("text/html");
-        assertThat(contentAsString(html)).contains("Your new application is ready.");
+        assertThat(contentAsString(html)).contains("TemperatureMonitor");
+    }
+    
+    @Test
+    public void javascriptAssets(){
+    	
+    	Content html = views.html.index.render("TemperatureMonitor");
+        
+    	assertThat(contentType(html)).isEqualTo("text/html");
+        assertThat(contentAsString(html)).contains("javascripts/jquery-2.1.3.min.js");
+        assertThat(contentAsString(html)).contains("javascripts/materialize.min.js");
+        assertThat(contentAsString(html)).contains("javascripts/main.js");
+        
+        assertThat(contentAsString(html)).contains("javascripts/excanvas.min.js");
+        assertThat(contentAsString(html)).contains("javascripts/jquery.flot.min.js");
+        assertThat(contentAsString(html)).contains("javascripts/jquery.flot.time.min.js");
+        assertThat(contentAsString(html)).contains("javascripts/jquery.flot.resize.min.js");
+    }
+    
+    @Test
+    public void stylesheetAssets(){
+    	
+    	Content html = views.html.index.render("TemperatureMonitor");
+        
+    	assertThat(contentType(html)).isEqualTo("text/html");
+    	assertThat(contentAsString(html)).contains("stylesheets/materialize.min.css");
+    	assertThat(contentAsString(html)).contains("stylesheets/main.css");
+    	assertThat(contentAsString(html)).contains("stylesheets/font-awesome.min.css");	
     }
 
 

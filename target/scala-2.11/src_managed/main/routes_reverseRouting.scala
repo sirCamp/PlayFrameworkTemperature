@@ -1,6 +1,6 @@
 // @SOURCE:/home/stefano/Repository/PlayFrameworkTemperature/conf/routes
-// @HASH:e420c29881c4d922bc7beb73ab6bf15fad6d3341
-// @DATE:Fri Mar 27 16:05:38 CET 2015
+// @HASH:845bd418a7c1625eead2a7eada38898eb27ff80d
+// @DATE:Tue Mar 31 09:55:04 CEST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,16 +15,22 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:19
-// @LINE:15
-// @LINE:14
+// @LINE:22
+// @LINE:18
+// @LINE:17
+// @LINE:16
 // @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:6
 package controllers {
 
+// @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -32,16 +38,9 @@ class ReverseTemperatureController {
 
 
 // @LINE:10
-def create(): Call = {
+def delete(data:Long): Call = {
    import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "temperature/create")
-}
-                        
-
-// @LINE:8
-def index(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "temperature")
+   Call("GET", _prefix + { _defaultPrefix } + "temperature/delete/" + implicitly[PathBindable[Long]].unbind("data", data))
 }
                         
 
@@ -52,14 +51,42 @@ def show(data:Long): Call = {
 }
                         
 
+// @LINE:13
+def create(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "temperature/create")
+}
+                        
+
+// @LINE:12
+def edit(data:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "temperature/edit/" + implicitly[PathBindable[Long]].unbind("data", data))
+}
+                        
+
+// @LINE:11
+def update(data:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "temperature/update/" + implicitly[PathBindable[Long]].unbind("data", data))
+}
+                        
+
+// @LINE:8
+def index(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "temperature")
+}
+                        
+
 }
                           
 
-// @LINE:19
+// @LINE:22
 class ReverseAssets {
 
 
-// @LINE:19
+// @LINE:22
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -69,27 +96,27 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:18
+// @LINE:17
+// @LINE:16
 class ReverseFailureController {
 
 
-// @LINE:15
+// @LINE:18
 def create(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "failure/create")
 }
                         
 
-// @LINE:13
+// @LINE:16
 def index(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "failure")
 }
                         
 
-// @LINE:14
+// @LINE:17
 def show(data:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "failure/show/" + implicitly[PathBindable[Long]].unbind("data", data))
@@ -116,10 +143,13 @@ def index(): Call = {
                   
 
 
-// @LINE:19
-// @LINE:15
-// @LINE:14
+// @LINE:22
+// @LINE:18
+// @LINE:17
+// @LINE:16
 // @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -127,6 +157,9 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
+// @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -134,22 +167,11 @@ class ReverseTemperatureController {
 
 
 // @LINE:10
-def create : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.TemperatureController.create",
+def delete : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemperatureController.delete",
    """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature/create"})
-      }
-   """
-)
-                        
-
-// @LINE:8
-def index : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.TemperatureController.index",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature"})
+      function(data) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature/delete/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("data", data)})
       }
    """
 )
@@ -166,14 +188,58 @@ def show : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:13
+def create : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemperatureController.create",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature/create"})
+      }
+   """
+)
+                        
+
+// @LINE:12
+def edit : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemperatureController.edit",
+   """
+      function(data) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature/edit/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("data", data)})
+      }
+   """
+)
+                        
+
+// @LINE:11
+def update : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemperatureController.update",
+   """
+      function(data) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature/update/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("data", data)})
+      }
+   """
+)
+                        
+
+// @LINE:8
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.TemperatureController.index",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "temperature"})
+      }
+   """
+)
+                        
+
 }
               
 
-// @LINE:19
+// @LINE:22
 class ReverseAssets {
 
 
-// @LINE:19
+// @LINE:22
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -187,13 +253,13 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:18
+// @LINE:17
+// @LINE:16
 class ReverseFailureController {
 
 
-// @LINE:15
+// @LINE:18
 def create : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FailureController.create",
    """
@@ -204,7 +270,7 @@ def create : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:13
+// @LINE:16
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FailureController.index",
    """
@@ -215,7 +281,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:14
+// @LINE:17
 def show : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FailureController.show",
    """
@@ -250,10 +316,13 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:19
-// @LINE:15
-// @LINE:14
+// @LINE:22
+// @LINE:18
+// @LINE:17
+// @LINE:16
 // @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -261,6 +330,9 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:13
+// @LINE:12
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -268,14 +340,8 @@ class ReverseTemperatureController {
 
 
 // @LINE:10
-def create(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemperatureController.create(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "create", Seq(), "POST", """""", _prefix + """temperature/create""")
-)
-                      
-
-// @LINE:8
-def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.TemperatureController.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "index", Seq(), "GET", """""", _prefix + """temperature""")
+def delete(data:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemperatureController.delete(data), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "delete", Seq(classOf[Long]), "GET", """""", _prefix + """temperature/delete/$data<[^/]+>""")
 )
                       
 
@@ -285,14 +351,38 @@ def show(data:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:13
+def create(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemperatureController.create(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "create", Seq(), "POST", """""", _prefix + """temperature/create""")
+)
+                      
+
+// @LINE:12
+def edit(data:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemperatureController.edit(data), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "edit", Seq(classOf[Long]), "GET", """""", _prefix + """temperature/edit/$data<[^/]+>""")
+)
+                      
+
+// @LINE:11
+def update(data:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemperatureController.update(data), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "update", Seq(classOf[Long]), "GET", """""", _prefix + """temperature/update/$data<[^/]+>""")
+)
+                      
+
+// @LINE:8
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.TemperatureController.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.TemperatureController", "index", Seq(), "GET", """""", _prefix + """temperature""")
+)
+                      
+
 }
                           
 
-// @LINE:19
+// @LINE:22
 class ReverseAssets {
 
 
-// @LINE:19
+// @LINE:22
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -301,25 +391,25 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:18
+// @LINE:17
+// @LINE:16
 class ReverseFailureController {
 
 
-// @LINE:15
+// @LINE:18
 def create(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FailureController.create(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FailureController", "create", Seq(), "POST", """""", _prefix + """failure/create""")
 )
                       
 
-// @LINE:13
+// @LINE:16
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FailureController.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FailureController", "index", Seq(), "GET", """""", _prefix + """failure""")
 )
                       
 
-// @LINE:14
+// @LINE:17
 def show(data:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FailureController.show(data), HandlerDef(this.getClass.getClassLoader, "", "controllers.FailureController", "show", Seq(classOf[Long]), "GET", """""", _prefix + """failure/show/$data<[^/]+>""")
 )

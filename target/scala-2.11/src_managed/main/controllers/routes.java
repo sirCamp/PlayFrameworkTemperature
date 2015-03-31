@@ -1,6 +1,6 @@
 // @SOURCE:/home/stefano/Repository/PlayFrameworkTemperature/conf/routes
-// @HASH:e420c29881c4d922bc7beb73ab6bf15fad6d3341
-// @DATE:Fri Mar 27 16:05:38 CET 2015
+// @HASH:845bd418a7c1625eead2a7eada38898eb27ff80d
+// @DATE:Tue Mar 31 09:55:04 CEST 2015
 
 package controllers;
 

@@ -28,7 +28,7 @@ object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
 Seq[Any](format.raw/*1.19*/("""
 
-"""),_display_(/*3.2*/main("Home")/*3.14*/ {_display_(Seq[Any](format.raw/*3.16*/("""
+"""),_display_(/*3.2*/main(message)/*3.15*/ {_display_(Seq[Any](format.raw/*3.17*/("""
 
 	"""),format.raw/*5.2*/("""<div class="container">
 	<div class="row" style="margin-top:50px;">
@@ -170,10 +170,10 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 27 16:04:52 CET 2015
+                  DATE: Tue Mar 31 11:48:00 CEST 2015
                   SOURCE: /home/stefano/Repository/PlayFrameworkTemperature/app/views/index.scala.html
-                  HASH: c330eb6f303fbafd3940cc64df4bef75c5c0d5ff
-                  MATRIX: 723->1|828->18|856->21|876->33|915->35|944->38|5915->4978
+                  HASH: 578b8358c6f2378f2e3df5d96483e99a286b39d4
+                  MATRIX: 723->1|828->18|856->21|877->34|916->36|945->39|5916->4979
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5|160->132
                   -- GENERATED --
               */

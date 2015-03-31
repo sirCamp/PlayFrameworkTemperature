@@ -1,0 +1,34 @@
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(FailureControllerTest, sbt.ForkMain$AnnotatedFingerscan@d930706, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestIndex[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestIndex[0m finished, took 1.565 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestShow[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestShow[0m finished, took 0.096 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestDelete[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestDelete[0m finished, took 0.074 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestUpdate[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mFailureControllerTest[0m.[36mtestUpdate[0m finished, took 0.08 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 1.822s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(TemperatureControllerTest, sbt.ForkMain$AnnotatedFingerscan@d733a31, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestIndex[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestIndex[0m finished, took 0.074 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestShow[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestShow[0m finished, took 1.059 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestDelete[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestDelete[0m finished, took 0.05 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestUpdate[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mTemperatureControllerTest[0m.[36mtestUpdate[0m finished, took 0.044 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 1.23s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0mdebug[0m] [0mRunner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 8, Failed 0, Errors 0, Passed 8[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	FailureControllerTest[0m
+[0m[[0mdebug[0m] [0m	TemperatureControllerTest[0m

@@ -7,6 +7,9 @@ GET     /                           			controllers.Application.index()
 
 GET     /temperature                           	controllers.TemperatureController.index()
 GET		/temperature/show/:data					controllers.TemperatureController.show(data: Long)
+GET		/temperature/delete/:data			    controllers.TemperatureController.delete(data: Long)
+GET		/temperature/update/:data			    controllers.TemperatureController.update(data: Long)
+GET		/temperature/edit/:data			    	controllers.TemperatureController.edit(data: Long)
 POST	/temperature/create						controllers.TemperatureController.create()
 
 

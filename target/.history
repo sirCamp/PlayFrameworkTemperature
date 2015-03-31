@@ -1,3 +1,19 @@
 run
 eclipse
 run
+test
+test ApplicationTest
+test ApplicationTest.java
+test testOnly ApplicationTest
+testOnly ApplicationTest
+testOnly TemperatureControllerTest
+run
+testOnly TemperatureControllerTest
+test
+run
+test
+run
+test
+activator
+run
+test
