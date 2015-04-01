@@ -43,8 +43,7 @@
         ajaxRequest(data);
         this.close();
       }
-      $(".fa-spin").show();
-      return console.log('Creo Oggetto e stampo');
+      return $(".fa-spin").show();
     });
     init = function() {
       var dateObject;
@@ -102,7 +101,6 @@
       series.label = 'Daily temperature';
       series.color = '#4db6ac';
       window.dataReal = dataReal;
-      console.log(series.data[0]);
       console.debug('[DEBUG]: INIZIALIZZO L\'OGGETTO GRAFICO');
       options = {
         series: {

@@ -59,7 +59,7 @@ $(document).ready ->
 	  
   		#return
 	 $(".fa-spin").show();
-	 console.log 'Creo Oggetto e stampo';
+	 
 
 	init = () ->
 		
@@ -121,7 +121,7 @@ $(document).ready ->
 	  series.label = 'Daily temperature'
 	  series.color = '#4db6ac';
 	  window.dataReal = dataReal;
-	  console.log series.data[0];
+	  #console.log series.data[0];
 	  
 	  console.debug '[DEBUG]: INIZIALIZZO L\'OGGETTO GRAFICO';
 	  options = 

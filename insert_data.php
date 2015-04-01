@@ -22,42 +22,61 @@ class CreateDataSet{
 
 	public function __fillCollection(){
 
-		for($j = 0; $j < 24; $j++){
+		$month = array('01'=>31,'02'=>28,'03'=>31,'04'=>30,'05'=>31,'06'=>30,'07'=>31,'08'=>31,'09'=>30,'10'=>31,'11'=>30,'12'=>31);
 
-			$hour = $j;
-			
-			if($j<10){
-				$hour = '0'.$j;
+		foreach($month as $key => $_month){
+			for($i = 0; $i < $_month; $i++){
+				for($j = 0; $j < 24; $j++){
+
+					$hour = $j;
+					$day =  $i;
+					
+					if($j<10){
+						$hour = '0'.$j;
+					}
+					if($i < 10){
+						$day = '0'.$i;
+					}
+								
+					$date = DateTime::createFromFormat('Y-m-d H:i:s', '2015-'.$key.'-'.$day.' '.$hour.':00:00');
+
+					$document = array(
+						'data'=>$date->format('Y-m-d'),
+						'timestamp'=>(strtotime($date->format('Y-m-d H:i:s'))),
+						'temperature'=>rand(0, 40),
+						);
+					
+					$this->temperatures_collection->insert($document);
+					echo "Temperatura inserita\n";
+				}
 			}
-						
-			$date = DateTime::createFromFormat('Y-m-d H:i:s', '2015-04-01 '.$hour.':00:00');
-
-			$document = array(
-				'data'=>'2015-04-01',
-				'timestamp'=>(strtotime($date->format('Y-m-d H:i:s'))),
-				'temperature'=>rand(0, 40),
-				);
-			
-			$this->temperatures_collection->insert($document);
-			echo "Temperatura inserita\n";
 		}
 
-		for($k = 1; $k < 25; $k++){
-			
-			$hour = $k;
-			if($k<10){
-				$hour = '0'.$k;
+		foreach($month as $key => $_month){
+			for($l = 0; $l < $_month; $l++){
+				for($k = 0; $k < 24; $k++){
+					
+					$hour = $k;
+					$day =  $l;
+					
+					if($k<10){
+						$hour = '0'.$k;
+					}
+					if($l < 10){
+						$day = '0'.$l;
+					}
+					
+					$date = DateTime::createFromFormat('Y-m-d H:i:s', '2015-'.$key.'-'.$day.' '.$hour.':00:00');
+
+					$document = array(
+						'data'=>$date->format('Y-m-d'),
+						'timestamp'=>(strtotime($date->format('Y-m-d H:i:s'))),
+						'message'=>CreateDataSet::$message[rand(0, 2)]
+						);
+					$this->failures_collection->insert($document);
+					echo "Fallimento inserito\n";
+				}
 			}
-
-			$date = DateTime::createFromFormat('Y-m-d H:i:s', '2015-04-01 '.$hour.':00:00');
-
-			$document = array(
-				'data'=>'2015-04-02',
-				'timestamp'=>(strtotime($date->format('Y-m-d H:i:s'))),
-				'message'=>CreateDataSet::$message[rand(0, 2)]
-				);
-			$this->failures_collection->insert($document);
-			echo "Fallimento inserito\n";
 		}
 	}
 
